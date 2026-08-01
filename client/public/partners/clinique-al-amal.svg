@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="96" viewBox="0 0 330 96" role="img" aria-labelledby="title desc">
+  <title id="title">Clinique Al Amal</title>
+  <desc id="desc">Colored Clinique Al Amal partner logo with medical cross and heart line mark</desc>
+  <defs>
+    <linearGradient id="amalMark" x1="10" y1="16" x2="74" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#008f7a"/>
+      <stop offset="1" stop-color="#00c2a8"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="10" width="326" height="76" rx="18" fill="#ffffff"/>
+  <rect x="10" y="16" width="64" height="64" rx="18" fill="url(#amalMark)"/>
+  <path d="M36 24h13v18h18v13H49v18H36V55H18V42h18V24Z" fill="#ffffff"/>
+  <path d="M21 62c7-10 13-4 21-12 8 8 14 2 21 12" stroke="#ff4d6d" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <text x="88" y="40" fill="#00695d" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" font-weight="900">Clinique</text>
+  <text x="88" y="66" fill="#ff4d6d" font-family="Inter, Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Al Amal</text>
+  <path d="M230 26h45c15 0 27 12 27 27s-12 27-27 27h-45c-15 0-27-12-27-27s12-27 27-27Z" fill="#effcf9"/>
+  <path d="M221 54h19l6-14 12 26 8-16h18" stroke="#008f7a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="289" cy="37" r="6" fill="#ff4d6d"/>
+</svg>

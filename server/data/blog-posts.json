@@ -1,0 +1,26 @@
+[
+  {
+    "id": "a112443e-66a4-4f27-a657-40e2e697e208",
+    "title": "Comment Preparer un Grand Nettoyage a Domicile ?",
+    "excerpt": "Les bons gestes avant l arrivee de l equipe de nettoyage.",
+    "content": "Ranger les objets fragiles, signaler les zones prioritaires et preparer l acces aux pieces permet a l equipe de travailler plus vite et d obtenir un resultat plus propre.",
+    "image": "/3.jpeg",
+    "category": "Domicile",
+    "author": "Equipe EMAS Nettoyage",
+    "published": true,
+    "createdAt": "2026-02-12T10:00:00.000Z",
+    "updatedAt": "2026-02-12T10:00:00.000Z"
+  },
+  {
+    "id": "8b11b294-edad-4ee9-883e-be11c45a23e3",
+    "title": "Nettoyage de Bureaux: Comment Organiser un Planning Efficace",
+    "excerpt": "Frequence, horaires et priorites pour garder des locaux propres.",
+    "content": "Un planning clair, des passages reguliers et une liste de zones sensibles ameliorent l hygiene des bureaux et le confort des equipes au quotidien.",
+    "image": "/6.jpeg",
+    "category": "Professionnel",
+    "author": "Equipe EMAS Nettoyage",
+    "published": true,
+    "createdAt": "2026-02-10T10:00:00.000Z",
+    "updatedAt": "2026-02-10T10:00:00.000Z"
+  }
+]

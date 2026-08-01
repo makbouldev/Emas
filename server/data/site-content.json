@@ -1,0 +1,171 @@
+{
+  "company": "EMAS Nettoyage",
+  "phone": "+212 522 49 16 16",
+  "phones": [
+    "+212 522 49 16 16",
+    "+212 522 20 71 11",
+    "+212 522 22 06 92"
+  ],
+  "email": "contact@cmpfnettoyage.ma",
+  "hero": {
+    "title": "Service de Nettoyage Professionnel",
+    "subtitle": "EMAS Nettoyage intervient pour maisons, bureaux, commerces, chantiers et sites professionnels avec des equipes fiables, du materiel adapte et un resultat propre jusque dans les details.",
+    "ctaPrimary": "Demander un Devis",
+    "ctaSecondary": "Voir Tous Les Services",
+    "backgroundImage": "/hero.jpeg"
+  },
+  "services": [
+    {
+      "title": "Nettoyage a Domicile",
+      "description": "Entretien regulier ou ponctuel des appartements, villas et residences avec une equipe soigneuse.",
+      "icon": "bi-house-check"
+    },
+    {
+      "title": "Nettoyage Bureaux",
+      "description": "Nettoyage quotidien ou hebdomadaire des bureaux, open spaces, sanitaires et espaces communs.",
+      "icon": "bi-building-check"
+    },
+    {
+      "title": "Grand Nettoyage",
+      "description": "Remise en propre approfondie apres demenagement, travaux, reception ou longue fermeture.",
+      "icon": "bi-stars"
+    },
+    {
+      "title": "Nettoyage Fin de Chantier",
+      "description": "Evacuation des poussieres, traces, vitres et sols apres travaux pour livrer un espace pret a utiliser.",
+      "icon": "bi-cone-striped"
+    },
+    {
+      "title": "Canapes, Tapis et Moquettes",
+      "description": "Shampooing, aspiration professionnelle et traitement des taches pour textiles d interieur.",
+      "icon": "bi-brush"
+    },
+    {
+      "title": "Vitrerie et Facades",
+      "description": "Nettoyage des vitres, vitrines et facades avec materiel securise et finition sans traces.",
+      "icon": "bi-window"
+    },
+    {
+      "title": "Desinfection des Espaces",
+      "description": "Desinfection ciblee des surfaces, sanitaires, cuisines, salles d attente et zones sensibles.",
+      "icon": "bi-shield-check"
+    },
+    {
+      "title": "Nettoyage Evenementiel",
+      "description": "Equipe avant, pendant et apres vos evenements pour garder les lieux propres et accueillants.",
+      "icon": "bi-calendar-check"
+    }
+  ],
+  "story": {
+    "heading": "Une Equipe de Nettoyage Complete et Reactive",
+    "content": "EMAS Nettoyage organise des interventions adaptees aux particuliers, entreprises, syndics, commerces et sites industriels. Nous preparons le planning, les produits, le materiel et le controle qualite afin de garantir un service propre, ponctuel et discret.",
+    "image": "/1.jpeg"
+  },
+  "fleet": [
+    {
+      "name": "Equipe Domicile",
+      "image": "/2.jpeg",
+      "details": [
+        "Entretien regulier",
+        "Produits adaptes",
+        "Intervention ponctuelle",
+        "Equipe de confiance"
+      ]
+    },
+    {
+      "name": "Equipe Professionnelle",
+      "image": "/3.jpeg",
+      "details": [
+        "Bureaux et commerces",
+        "Planning flexible",
+        "Materiel professionnel",
+        "Controle qualite"
+      ]
+    },
+    {
+      "name": "Equipe Chantier et Grand Nettoyage",
+      "image": "/4.jpeg",
+      "details": [
+        "Fin de travaux",
+        "Vitres et sols",
+        "Tapis et canapes",
+        "Desinfection"
+      ]
+    }
+  ],
+  "gallery": [
+    "/5.jpeg",
+    "/6.jpeg",
+    "/7.jpeg",
+    "/8.jpeg",
+    "/9.jpeg",
+    "/10.jpeg"
+  ],
+  "stats": [
+    {
+      "label": "Espaces Nettoyes",
+      "value": "1200+"
+    },
+    {
+      "label": "Interventions Mensuelles",
+      "value": "350+"
+    },
+    {
+      "label": "Agents Formes",
+      "value": "80+"
+    },
+    {
+      "label": "Clients Satisfaits",
+      "value": "98%"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Atlas Bureaux",
+      "initials": "AB",
+      "logo": "/partners/atlas-bureaux.svg"
+    },
+    {
+      "name": "Casa Syndic",
+      "initials": "CS",
+      "logo": "/partners/casa-syndic.svg"
+    },
+    {
+      "name": "Riad Services",
+      "initials": "RS",
+      "logo": "/partners/riad-services.svg"
+    },
+    {
+      "name": "Nova Events",
+      "initials": "NE",
+      "logo": "/partners/nova-events.svg"
+    },
+    {
+      "name": "Clinique Al Amal",
+      "initials": "CA",
+      "logo": "/partners/clinique-al-amal.svg"
+    },
+    {
+      "name": "Market Pro",
+      "initials": "MP",
+      "logo": "/partners/market-pro.svg"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Client Particulier",
+      "role": "Grand Nettoyage Domicile",
+      "text": "Equipe ponctuelle, travail soigne et maison rendue impeccable apres l intervention."
+    },
+    {
+      "name": "Responsable Bureau",
+      "role": "Entretien Professionnel",
+      "text": "EMAS Nettoyage garde nos locaux propres avec regularite, discretion et un vrai sens du detail."
+    },
+    {
+      "name": "Partenaire Syndic",
+      "role": "Espaces Communs",
+      "text": "Service fiable pour les halls, escaliers, vitres et parkings. Les residents voient la difference."
+    }
+  ]
+}

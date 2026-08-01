@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="96" viewBox="0 0 300 96" role="img" aria-labelledby="title desc">
+  <title id="title">Market Pro</title>
+  <desc id="desc">Colored Market Pro partner logo with shopping basket and growth mark</desc>
+  <defs>
+    <linearGradient id="marketMark" x1="10" y1="16" x2="74" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f77f00"/>
+      <stop offset="1" stop-color="#d62828"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="10" width="296" height="76" rx="18" fill="#ffffff"/>
+  <rect x="10" y="16" width="64" height="64" rx="18" fill="url(#marketMark)"/>
+  <path d="M22 38h40l-6 24H28l-6-24Z" fill="#ffffff"/>
+  <path d="M30 38c0-10 5-17 12-17s12 7 12 17M31 48h22M35 58h14" stroke="#d62828" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="28" cy="66" r="4" fill="#ffd166"/>
+  <circle cx="56" cy="66" r="4" fill="#ffd166"/>
+  <text x="88" y="42" fill="#7a1f00" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="900">Market</text>
+  <text x="88" y="66" fill="#d62828" font-family="Inter, Arial, Helvetica, sans-serif" font-size="22" font-weight="800">Pro</text>
+  <path d="M199 64h70" stroke="#fff0df" stroke-width="16" stroke-linecap="round"/>
+  <path d="M207 62c10-15 19-12 28-19 8-6 14-16 27-17" stroke="#f77f00" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="m262 26 12 1-6 10" stroke="#d62828" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M209 64h55" stroke="#d62828" stroke-width="4" stroke-linecap="round"/>
+</svg>

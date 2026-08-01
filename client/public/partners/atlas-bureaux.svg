@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="96" viewBox="0 0 300 96" role="img" aria-labelledby="title desc">
+  <title id="title">Atlas Bureaux</title>
+  <desc id="desc">Colored Atlas Bureaux partner logo with mountain and office desk mark</desc>
+  <defs>
+    <linearGradient id="atlasMark" x1="10" y1="14" x2="76" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f66b3"/>
+      <stop offset="1" stop-color="#00b8a9"/>
+    </linearGradient>
+    <linearGradient id="atlasAccent" x1="20" y1="66" x2="72" y2="66" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb703"/>
+      <stop offset="1" stop-color="#fb8500"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="10" width="296" height="76" rx="18" fill="#ffffff"/>
+  <rect x="10" y="16" width="64" height="64" rx="18" fill="url(#atlasMark)"/>
+  <path d="M20 57 36 28l8 14 7-10 14 25H52l-4-8H36l-4 8H20Z" fill="#ffffff"/>
+  <path d="M27 66h36" stroke="url(#atlasAccent)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M29 72h32" stroke="#d9f7f4" stroke-width="3" stroke-linecap="round"/>
+  <text x="88" y="42" fill="#053f75" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="900">Atlas</text>
+  <text x="88" y="66" fill="#078f87" font-family="Inter, Arial, Helvetica, sans-serif" font-size="22" font-weight="800">Bureaux</text>
+  <path d="M207 26h52c6 0 11 5 11 11v22c0 6-5 11-11 11h-52c-6 0-11-5-11-11V37c0-6 5-11 11-11Z" fill="#eef9ff"/>
+  <path d="M209 60h48M220 52h26M216 37h36" stroke="#0f66b3" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="258" cy="37" r="4" fill="#fb8500"/>
+</svg>
