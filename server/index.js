@@ -32,24 +32,24 @@ const CONTACT_MESSAGES_FILE = path.join(DATA_DIR, 'contact-messages.json');
 const defaultBlogPosts = [
   {
     id: randomUUID(),
-    title: 'Que Faire en Cas d Urgence Medicale a Domicile ?',
-    excerpt: 'Les reflexes essentiels avant l arrivee de l ambulance.',
-    content: 'Garder le calme, donner des informations claires et preparer les documents utiles permet une prise en charge plus rapide.',
+    title: 'Comment Preparer un Grand Nettoyage a Domicile ?',
+    excerpt: 'Les bons gestes avant l arrivee de l equipe de nettoyage.',
+    content: 'Ranger les objets fragiles, signaler les zones prioritaires et preparer l acces aux pieces permet a l equipe de travailler plus vite et d obtenir un resultat plus propre.',
     image: '/3.jpeg',
-    category: 'Urgence',
-    author: 'Equipe EMAS',
+    category: 'Domicile',
+    author: 'Equipe EMAS Nettoyage',
     published: true,
     createdAt: '2026-02-12T10:00:00.000Z',
     updatedAt: '2026-02-12T10:00:00.000Z'
   },
   {
     id: randomUUID(),
-    title: 'Transport Dialyse: Comment Bien Organiser les Trajets',
-    excerpt: 'Planification, ponctualite et confort du patient.',
-    content: 'Une bonne organisation des horaires et un suivi regulier ameliorent l experience du patient et de sa famille.',
+    title: 'Nettoyage de Bureaux: Comment Organiser un Planning Efficace',
+    excerpt: 'Frequence, horaires et priorites pour garder des locaux propres.',
+    content: 'Un planning clair, des passages reguliers et une liste de zones sensibles ameliorent l hygiene des bureaux et le confort des equipes au quotidien.',
     image: '/6.jpeg',
-    category: 'Transport',
-    author: 'Equipe EMAS',
+    category: 'Professionnel',
+    author: 'Equipe EMAS Nettoyage',
     published: true,
     createdAt: '2026-02-10T10:00:00.000Z',
     updatedAt: '2026-02-10T10:00:00.000Z'
@@ -57,81 +57,81 @@ const defaultBlogPosts = [
 ];
 
 const defaultSiteContent = {
-  company: 'EMAS Assistance',
+  company: 'EMAS Nettoyage',
   phone: '+212 771 01 44 47',
   phones: ['+212 771 01 44 47'],
-  email: 'cmpfcasa@cmpfassistance.ma',
+  email: 'contact@cmpfnettoyage.ma',
   hero: {
-    title: 'Ambulance et Assistance Medicale',
+    title: 'Service de Nettoyage Professionnel',
     subtitle:
-      'Sur un simple appel et a tout moment, la EMAS intervient pour le transport, le rapatriement sanitaire et l assistance medicale avec rapidite et promptitude.',
-    ctaPrimary: 'Demander une Assistance',
+      'EMAS Nettoyage intervient pour maisons, bureaux, commerces, chantiers et sites professionnels avec des equipes fiables, du materiel adapte et un resultat propre jusque dans les details.',
+    ctaPrimary: 'Demander un Devis',
     ctaSecondary: 'Voir Tous Les Services',
     backgroundImage: '/hero.jpeg'
   },
   services: [
     {
-      title: 'Ambulance Medicalisee',
-      description: 'Prise en charge medicale immediate avec equipements adaptes selon l urgence.',
-      icon: 'bi-heart-pulse'
+      title: 'Nettoyage a Domicile',
+      description: 'Entretien regulier ou ponctuel des appartements, villas et residences avec une equipe soigneuse.',
+      icon: 'bi-house-check'
     },
     {
-      title: 'Ambulance avec Medecin',
-      description: 'Mobilisation d une ambulance avec medecin et/ou infirmier(e) si la situation l exige.',
-      icon: 'bi-hospital'
+      title: 'Nettoyage Bureaux',
+      description: 'Nettoyage quotidien ou hebdomadaire des bureaux, open spaces, sanitaires et espaces communs.',
+      icon: 'bi-building-check'
     },
     {
-      title: 'Medecin et Infirmier a Domicile',
-      description: 'Intervention a domicile pour soins medicaux, infirmiers et suivi apres hospitalisation.',
-      icon: 'bi-house-heart'
+      title: 'Grand Nettoyage',
+      description: 'Remise en propre approfondie apres demenagement, travaux, reception ou longue fermeture.',
+      icon: 'bi-stars'
     },
     {
-      title: 'Hospitalisation a Domicile',
-      description: 'Organisation d une prise en charge medicale a domicile avec intervenants qualifies.',
-      icon: 'bi-hospital-fill'
+      title: 'Nettoyage Fin de Chantier',
+      description: 'Evacuation des poussieres, traces, vitres et sols apres travaux pour livrer un espace pret a utiliser.',
+      icon: 'bi-cone-striped'
     },
     {
-      title: 'Transport Dialyse',
-      description: 'Transport programme et securise des patients pour les seances de dialyse.',
-      icon: 'bi-truck'
+      title: 'Canapes, Tapis et Moquettes',
+      description: 'Shampooing, aspiration professionnelle et traitement des taches pour textiles d interieur.',
+      icon: 'bi-brush'
     },
     {
-      title: 'Couveuse et Heliport',
-      description: 'Solutions specialisees pour le transfert neonatal et les evacuations specifiques.',
-      icon: 'bi-airplane'
+      title: 'Vitrerie et Facades',
+      description: 'Nettoyage des vitres, vitrines et facades avec materiel securise et finition sans traces.',
+      icon: 'bi-window'
     },
     {
-      title: 'Assistance Psychologique',
-      description: 'Soutien psychologique en cas d evenement traumatisant.',
-      icon: 'bi-person-hearts'
-    },
-    {
-      title: 'Evenements Speciaux',
-      description: 'Presence d ambulance(s), infirmerie mobile et equipe medicale pendant tout evenement.',
+      title: 'Desinfection des Espaces',
+      description: 'Desinfection ciblee des surfaces, sanitaires, cuisines, salles d attente et zones sensibles.',
       icon: 'bi-shield-check'
+    },
+    {
+      title: 'Nettoyage Evenementiel',
+      description: 'Equipe avant, pendant et apres vos evenements pour garder les lieux propres et accueillants.',
+      icon: 'bi-calendar-check'
     }
   ],
   story: {
-    heading: 'Une Assistance Complete et Rapide',
+    heading: 'Une Equipe de Nettoyage Complete et Reactive',
     content:
-      'La EMAS assure le transfert vers des structures de soins, le rapatriement sanitaire, la constitution du dossier administratif et l organisation d evacuations locoregionales ou de rapatriements si necessaire. Pour les cas hors urgence, nous recherchons et mobilisons medecins, infirmiers, intervenants paramedicaux et materiel medical.',
+      'EMAS Nettoyage organise des interventions adaptees aux particuliers, entreprises, syndics, commerces et sites industriels. Nous preparons le planning, les produits, le materiel et le controle qualite afin de garantir un service propre, ponctuel et discret.',
     image: '/1.jpeg'
   },
   fleet: [
     {
-      name: 'Ambulance Urgence',
+      name: 'Equipe Domicile',
       image: '/2.jpeg',
-      details: ['Intervention immediate', 'Materiel de premiers soins', 'Prise en charge 24/7', 'Equipe qualifiee']
+      details: ['Entretien regulier', 'Produits adaptes', 'Intervention ponctuelle', 'Equipe de confiance']
     },
     {
-      name: 'Ambulance Medicalisee',
+      name: 'Equipe Professionnelle',
       image: '/3.jpeg',
-      details: ['Monitoring medical', 'Oxygene et equipements', 'Accompagnement medical', 'Transport securise']
+      details: ['Bureaux et commerces', 'Planning flexible', 'Materiel professionnel', 'Controle qualite']
     },
     {
-      name: 'Transport Specialise',
+      name: 'Equipe Chantier et Grand Nettoyage',
       image: '/4.jpeg',
-      details: ['Couveuse', 'Dialyse', 'Rapatriement', 'Evacuation locoregionale']
+      details: ['Fin de travaux', 'Vitres et sols', 'Tapis et canapes', 'Desinfection']
     }
   ],
   gallery: ['/5.jpeg', '/6.jpeg', '/7.jpeg', '/8.jpeg', '/9.jpeg', '/10.jpeg'],
@@ -141,29 +141,22 @@ const defaultSiteContent = {
     { label: 'Agents Formes', value: '80+' },
     { label: 'Clients Satisfaits', value: '98%' }
   ],
-  partners: [
-    { name: 'Atlas Bureaux', initials: 'AB', logo: '/partners/atlas-bureaux.svg' },
-    { name: 'Casa Syndic', initials: 'CS', logo: '/partners/casa-syndic.svg' },
-    { name: 'Riad Services', initials: 'RS', logo: '/partners/riad-services.svg' },
-    { name: 'Nova Events', initials: 'NE', logo: '/partners/nova-events.svg' },
-    { name: 'Clinique Al Amal', initials: 'CA', logo: '/partners/clinique-al-amal.svg' },
-    { name: 'Market Pro', initials: 'MP', logo: '/partners/market-pro.svg' }
-  ],
+  partners: [],
   testimonials: [
     {
-      name: 'Client EMAS',
-      role: 'Transport Medical',
-      text: 'Avec EMAS Assistance, chaque deplacement devient une experience unique, securisee et rassurante.'
+      name: 'Client Particulier',
+      role: 'Grand Nettoyage Domicile',
+      text: 'Equipe ponctuelle, travail soigne et maison rendue impeccable apres l intervention.'
     },
     {
-      name: 'Famille Patient',
-      role: 'Assistance a Domicile',
-      text: 'Nos ambulanciers qualifies et attentifs placent le confort et la securite au coeur de leur mission.'
+      name: 'Responsable Bureau',
+      role: 'Entretien Professionnel',
+      text: 'EMAS Nettoyage garde nos locaux propres avec regularite, discretion et un vrai sens du detail.'
     },
     {
-      name: 'Partenaire Entreprise',
-      role: 'Prise en charge sur site',
-      text: 'Vehicules conventionnes, modernes et equipes: fiabilite et serenite de jour comme de nuit.'
+      name: 'Partenaire Syndic',
+      role: 'Espaces Communs',
+      text: 'Service fiable pour les halls, escaliers, vitres et parkings. Les residents voient la difference.'
     }
   ]
 };
