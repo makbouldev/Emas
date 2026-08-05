@@ -20,14 +20,6 @@ const homeFaqs = [
   { q: 'Pouvez-vous proposer un contrat regulier ?', a: 'Oui, nous preparons un planning d entretien quotidien, hebdomadaire ou mensuel avec controle qualite.' }
 ];
 
-const defaultPartners = [
-  { name: 'Atlas Bureaux', initials: 'AB', logo: '/partners/atlas-bureaux.svg' },
-  { name: 'Casa Syndic', initials: 'CS', logo: '/partners/casa-syndic.svg' },
-  { name: 'Riad Services', initials: 'RS', logo: '/partners/riad-services.svg' },
-  { name: 'Nova Events', initials: 'NE', logo: '/partners/nova-events.svg' },
-  { name: 'Clinique Al Amal', initials: 'CA', logo: '/partners/clinique-al-amal.svg' },
-  { name: 'Market Pro', initials: 'MP', logo: '/partners/market-pro.svg' }
-];
 
 function AnimatedStatValue({ value }) {
   const valueRef = useRef(null);
@@ -124,10 +116,7 @@ function HomePage() {
 
   const leftFaqs = homeFaqs.slice(0, Math.ceil(homeFaqs.length / 2));
   const rightFaqs = homeFaqs.slice(Math.ceil(homeFaqs.length / 2));
-  const trustedPartners = useMemo(
-    () => (Array.isArray(content.partners) && content.partners.length ? content.partners : defaultPartners),
-    [content.partners]
-  );
+
 
   const googleStyleReviews = useMemo(
     () =>
@@ -352,36 +341,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="partners-strip-section" aria-label="Entreprises partenaires">
-        <div className="container">
-          <motion.div
-            className="partners-strip"
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.55 }}
-          >
-            <div className="partners-strip-copy">
-              <span>Ils nous font confiance</span>
-              <strong>Societes deja accompagnees</strong>
-            </div>
-            <div className="partners-logo-row">
-              {trustedPartners.map((partner, index) => (
-                <div className={`partner-logo-chip ${partner.logo ? 'partner-logo-chip-real' : ''}`} key={`${partner.name}-${index}`} aria-label={partner.name}>
-                  {partner.logo ? (
-                    <img src={resolveMediaPath(partner.logo, apiBaseUrl)} alt={partner.name} />
-                  ) : (
-                    <>
-                      <span className="partner-logo-mark">{partner.initials || partner.name?.slice(0, 2)}</span>
-                      <span className="partner-logo-name">{partner.name}</span>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       <section className="section reviews-creative-section">
         <div className="container">
