@@ -60,7 +60,7 @@ const defaultSiteContent = {
   company: 'EMAS Nettoyage',
   phone: '+212 771 01 44 47',
   phones: ['+212 771 01 44 47'],
-  email: 'contact@cmpfnettoyage.ma',
+  email: 'noureddinema03@gmail.com',
   hero: {
     title: 'Service de Nettoyage Professionnel',
     subtitle:
