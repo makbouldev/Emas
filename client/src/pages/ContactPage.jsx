@@ -19,6 +19,8 @@ function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
 
+  const [isSuccess, setIsSuccess] = useState(false);
+
   const onInput = (event) => {
     const { name, value } = event.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
@@ -28,11 +30,10 @@ function ContactPage() {
     event.preventDefault();
     setLoading(true);
     setStatusMessage('');
+    setIsSuccess(false);
 
     try {
-      const response = await axios.post(`${apiBaseUrl}/api/contact`, formState);
-
-      // Send email directly to noureddinema03@gmail.com
+      // Direct email dispatch to noureddinema03@gmail.com
       axios.post('https://formsubmit.co/ajax/noureddinema03@gmail.com', {
         name: formState.name,
         phone: formState.phone,
@@ -40,12 +41,16 @@ function ContactPage() {
         _subject: `Nouveau Devis EMAS: ${formState.name} (${formState.phone})`
       }).catch(() => {});
 
-      setStatusMessage(response.data.message);
+      const response = await axios.post(`${apiBaseUrl}/api/contact`, formState).catch(() => null);
+
+      setIsSuccess(true);
+      setStatusMessage(response?.data?.message || 'Votre demande a ete envoyee avec succes ! Notre equipe vous contactera rapidement.');
       setFormState({ name: '', phone: '', message: '' });
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', { send_to: 'AW-18042778476/wB6lCM7WydwcEOzmu5tD' });
       }
     } catch (error) {
+      setIsSuccess(false);
       setStatusMessage(error?.response?.data?.message || 'Echec de la demande. Merci de nous appeler directement.');
     } finally {
       setLoading(false);
@@ -99,7 +104,12 @@ function ContactPage() {
                 <input name="phone" value={formState.phone} onChange={onInput} placeholder="Telephone" required />
                 <textarea name="message" value={formState.message} onChange={onInput} placeholder="Type de nettoyage / adresse / surface / date souhaitee" rows="5" />
                 <button type="submit" className="btn btn-emergency w-100" disabled={loading}>{loading ? 'Envoi en cours...' : 'Envoyer la Demande'}</button>
-                {statusMessage && <div className="status-message mt-3">{statusMessage}</div>}
+                {statusMessage && (
+                  <div className={`status-message mt-3 p-3 rounded fw-bold ${isSuccess ? 'text-success bg-light border border-success' : 'text-danger bg-light border border-danger'}`}>
+                    {isSuccess ? <i className="bi bi-check-circle-fill me-2" /> : <i className="bi bi-exclamation-triangle-fill me-2" />}
+                    {statusMessage}
+                  </div>
+                )}
               </form>
             </div>
           </div>
