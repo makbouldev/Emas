@@ -33,6 +33,9 @@ function ContactPage() {
       const response = await axios.post(`${apiBaseUrl}/api/contact`, formState);
       setStatusMessage(response.data.message);
       setFormState({ name: '', phone: '', message: '' });
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', { send_to: 'AW-18042778476/wB6lCM7WydwcEOzmu5tD' });
+      }
     } catch (error) {
       setStatusMessage(error?.response?.data?.message || 'Echec de la demande. Merci de nous appeler directement.');
     } finally {
