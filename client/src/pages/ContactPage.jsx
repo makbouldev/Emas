@@ -31,6 +31,15 @@ function ContactPage() {
 
     try {
       const response = await axios.post(`${apiBaseUrl}/api/contact`, formState);
+
+      // Send email directly to noureddinema03@gmail.com
+      axios.post('https://formsubmit.co/ajax/noureddinema03@gmail.com', {
+        name: formState.name,
+        phone: formState.phone,
+        message: formState.message,
+        _subject: `Nouveau Devis EMAS: ${formState.name} (${formState.phone})`
+      }).catch(() => {});
+
       setStatusMessage(response.data.message);
       setFormState({ name: '', phone: '', message: '' });
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {

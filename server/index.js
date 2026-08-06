@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
+const nodemailer = require('nodemailer');
 const { randomUUID } = require('crypto');
 
 dotenv.config();
@@ -409,6 +410,8 @@ app.post('/api/contact', (req, res) => {
   messages.unshift(contactEntry);
   saveContactMessages(messages);
 
+  sendEmailNotification(contactEntry).catch((e) => console.error(e.message));
+
   return res.json({
     success: true,
     message: 'Demande recue. L equipe EMAS vous contactera rapidement.',
@@ -419,6 +422,45 @@ app.post('/api/contact', (req, res) => {
     }
   });
 });
+
+const sendEmailNotification = async (contactEntry) => {
+  const targetEmail = process.env.NOTIFICATION_EMAIL || 'noureddinema03@gmail.com';
+  const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
+  const smtpPort = Number(process.env.SMTP_PORT || 587);
+  const smtpUser = process.env.SMTP_USER || process.env.GMAIL_USER;
+  const smtpPass = process.env.SMTP_PASS || process.env.GMAIL_PASS;
+
+  if (!smtpUser || !smtpPass) {
+    console.log(`[Contact Notification] New message from ${contactEntry.name} (${contactEntry.phone}). Target: ${targetEmail}`);
+    return;
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465,
+      auth: { user: smtpUser, pass: smtpPass }
+    });
+
+    await transporter.sendMail({
+      from: `"EMAS Nettoyage" <${smtpUser}>`,
+      to: targetEmail,
+      subject: `Nouveau Devis: ${contactEntry.name} (${contactEntry.phone})`,
+      text: `Nouveau message de devis:\nNom: ${contactEntry.name}\nTéléphone: ${contactEntry.phone}\nMessage: ${contactEntry.message || 'Aucun message'}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #e0e0e0; border-radius: 8px;">
+          <h2 style="color: #04508d; margin-top: 0;">Nouveau Message Devis - EMAS Nettoyage</h2>
+          <p><strong>Nom complet:</strong> ${contactEntry.name}</p>
+          <p><strong>Téléphone:</strong> <a href="tel:${contactEntry.phone}" style="color: #04508d;">${contactEntry.phone}</a></p>
+          <p><strong>Message / Besoin:</strong> ${contactEntry.message || 'Aucun message'}</p>
+        </div>
+      `
+    });
+  } catch (err) {
+    console.error(`[Contact Notification Error] ${err.message}`);
+  }
+};
 
 const fallbackAssistantReply = (message, siteContent, lang = 'fr') => {
   const normalized = String(message || '').toLowerCase();
