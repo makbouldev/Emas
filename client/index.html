@@ -12,9 +12,21 @@
 
       gtag('config', 'AW-18363723978');
     </script>
-    <!-- Event snippet for Contact conversion page -->
+    <!-- Event snippet for Website lead conversion page -->
     <script>
-      gtag('event', 'conversion', {'send_to': 'AW-18042778476/wB6lCM7WydwcEOzmu5tD'});
+      gtag('event', 'conversion', {'send_to': 'AW-18363723978/A8GVCMXEtOQcEMrhwLRE'});
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18363723978/A8GVCMXEtOQcEMrhwLRE',
+            'event_callback': callback
+        });
+        return false;
+      }
     </script>
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="shortcut icon" type="image/png" href="/logo.png" />
