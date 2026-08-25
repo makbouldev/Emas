@@ -164,11 +164,11 @@ function HomePage() {
             <div className="hero-actions-wrap">
               <a className="hero-action-btn hero-call-btn" href={`tel:${phoneDigits}`}>
                 <i className="bi bi-telephone-fill" />
-                <span>Appeler: 07 71 01 44 47</span>
+                <span>Appeler: 07 25 57 25 50</span>
               </a>
               <a className="hero-action-btn hero-wa-btn" href={`https://wa.me/${whatsappDigits}`} target="_blank" rel="noreferrer">
                 <i className="bi bi-whatsapp" />
-                <span>WhatsApp: 07 71 01 44 47</span>
+                <span>WhatsApp: 07 25 57 25 50</span>
               </a>
             </div>
             <div className="hero-secondary-action">

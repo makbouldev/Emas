@@ -1,7 +1,7 @@
 export const fallbackData = {
   company: 'EMAS Nettoyage',
-  phone: '+212 771 01 44 47',
-  phones: ['+212 771 01 44 47'],
+  phone: '+212 725 57 25 50',
+  phones: ['+212 725 57 25 50'],
   email: 'noureddinema03@gmail.com',
   hero: {
     title: 'Service de Nettoyage Professionnel',

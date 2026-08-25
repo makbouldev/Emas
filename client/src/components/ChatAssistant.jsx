@@ -22,7 +22,7 @@ function ChatAssistant() {
   const [errorMessage, setErrorMessage] = useState('');
   const listRef = useRef(null);
 
-  const phone = content?.phone || '+212 771 01 44 47';
+  const phone = content?.phone || '+212 725 57 25 50';
   const phoneDigits = phone.replace(/[^\d+]/g, '');
   const whatsappDigits = phone.replace(/\D/g, '');
   const endpoint = useMemo(() => `${apiBaseUrl}/api/assistant/chat`, [apiBaseUrl]);
