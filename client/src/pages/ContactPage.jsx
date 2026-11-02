@@ -47,7 +47,7 @@ function ContactPage() {
       setStatusMessage(response?.data?.message || 'Votre demande a ete envoyee avec succes ! Notre equipe vous contactera rapidement.');
       setFormState({ name: '', phone: '', message: '' });
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', { send_to: 'AW-18363723978/A8GVCMXEtOQcEMrhwLRE' });
+        window.gtag('event', 'conversion', { send_to: 'AW-18516311815/aWsdCOy1sLAdEIf-of1E' });
       }
     } catch (error) {
       setIsSuccess(false);
