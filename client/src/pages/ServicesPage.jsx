@@ -5,138 +5,6 @@ import Seo from '../components/Seo';
 import ServiceCardImage from '../components/ServiceCardImage';
 import { buildBreadcrumbSchema, buildFaqSchema, buildWebPageSchema } from '../seo/schemas';
 
-const serviceCatalog = [
-  {
-    title: 'Nettoyage a Domicile',
-    icon: 'bi-house-check-fill',
-    category: 'Domicile',
-    image: '/services/domicile.jpg',
-    description: 'Entretien des appartements, villas, cuisines, sanitaires, chambres et espaces de vie.'
-  },
-  {
-    slug: 'grand-menage',
-    title: 'Grand Nettoyage',
-    icon: 'bi-stars',
-    category: 'Domicile',
-    image: '/services/grand-menage-1.png',
-    images: [
-      '/services/grand-menage-1.png',
-      '/services/grand-menage-2.jpg',
-      '/services/grand-menage-3.png'
-    ],
-    description: 'Nettoyage approfondi apres demenagement, reception, travaux legers ou longue absence.'
-  },
-  {
-    slug: 'canapes-tapis-moquettes',
-    title: 'Canapes et Tapis',
-    icon: 'bi-brush-fill',
-    category: 'Domicile',
-    image: '/services/canapes-1.jpg',
-    images: [
-      '/services/canapes-1.jpg',
-      '/services/canapes-2.jpg',
-      '/services/canapes-3.jpg'
-    ],
-    description: 'Shampooing, aspiration, traitement des taches et rafraichissement des textiles.'
-  },
-  {
-    slug: 'nettoyage-de-bureaux',
-    title: 'Nettoyage Bureaux',
-    icon: 'bi-building-check',
-    category: 'Professionnel',
-    image: '/services/bureaux-1.png',
-    images: [
-      '/services/bureaux-1.png',
-      '/services/bureaux-2.png',
-      '/services/bureaux-3.png'
-    ],
-    description: 'Entretien regulier des bureaux, open spaces, salles de reunion et sanitaires.'
-  },
-  {
-    title: 'Commerces et Showrooms',
-    icon: 'bi-shop',
-    category: 'Professionnel',
-    image: '/services/bureaux.jpg',
-    description: 'Nettoyage de vitrines, sols, rayons, comptoirs et zones clients avant ouverture.'
-  },
-  {
-    title: 'Syndics et Espaces Communs',
-    icon: 'bi-door-open-fill',
-    category: 'Professionnel',
-    image: '/services/sols.jpg',
-    description: 'Halls, escaliers, ascenseurs, parkings, locaux techniques et sorties des poubelles.'
-  },
-  {
-    slug: 'nettoyage-fin-de-chantier',
-    title: 'Nettoyage Fin de Chantier',
-    icon: 'bi-cone-striped',
-    category: 'Technique',
-    image: '/services/chantier-1.jpg',
-    images: [
-      '/services/chantier-1.jpg',
-      '/services/chantier-2.jpg',
-      '/services/chantier-3.png'
-    ],
-    description: 'Poussiere fine, traces de peinture, vitres, sols et remise en propre avant livraison.'
-  },
-  {
-    slug: 'traitement-cristallisation-des-sols',
-    title: 'Traitement et Cristallisation des Sols',
-    icon: 'bi-grid-3x3-gap-fill',
-    category: 'Technique',
-    image: '/services/sols-1.jpg',
-    images: [
-      '/services/sols-1.jpg',
-      '/services/sols-2.jpg',
-      '/services/sols-3.png'
-    ],
-    description: 'Decapage, poncage, lustrage et cristallisation du marbre, carrelage et parquets.'
-  },
-  {
-    slug: 'nettoyage-de-vitres',
-    title: 'Vitrerie et Facades',
-    icon: 'bi-window',
-    category: 'Technique',
-    image: '/services/vitres-1.jpg',
-    images: [
-      '/services/vitres-1.jpg',
-      '/services/vitres-2.png',
-      '/services/vitres-3.jpg'
-    ],
-    description: 'Vitres, baies, vitrines et facades avec materiel adapte et finition sans traces.'
-  },
-  {
-    title: 'Desinfection',
-    icon: 'bi-shield-check',
-    category: 'Technique',
-    image: '/services/desinfection.jpg',
-    description: 'Desinfection ciblee des surfaces, sanitaires, cuisines et zones sensibles.'
-  },
-  {
-    title: 'Nettoyage Evenementiel',
-    icon: 'bi-calendar-check-fill',
-    category: 'Evenementiel',
-    image: '/services/facades.jpg',
-    description: 'Equipe avant, pendant et apres salons, receptions, conferences et evenements publics.'
-  },
-  {
-    title: 'Contrats Reguliers',
-    icon: 'bi-repeat',
-    category: 'Evenementiel',
-    image: '/services/domicile.jpg',
-    description: 'Planning quotidien, hebdomadaire ou mensuel avec suivi, reporting et controle qualite.'
-  },
-  {
-    title: 'Intervention Express',
-    icon: 'bi-lightning-charge-fill',
-    category: 'Evenementiel',
-    image: '/services/vitres.jpg',
-    description: 'Equipe mobilisee rapidement pour remise en etat urgente ou preparation d un lieu.'
-  }
-];
-
-const categories = ['Domicile', 'Professionnel', 'Technique', 'Evenementiel'];
-
 const faqs = [
   { q: 'Intervenez-vous 7j/7 ?', a: 'Oui, EMAS Nettoyage organise les passages selon vos contraintes, y compris tot le matin, le soir ou le week-end.' },
   { q: 'Proposez-vous un devis avant intervention ?', a: 'Oui, nous pouvons estimer par telephone ou WhatsApp, puis confirmer apres details ou visite si necessaire.' },
@@ -176,65 +44,45 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="section services-intro-creative">
+      <section className="section services-section py-5" id="services">
         <div className="container">
-          <div className="service-intro-panel">
-            <h2 className="section-title text-start mb-3">Catalogue de Services EMAS Nettoyage</h2>
-            <p className="section-copy mb-4">
-              Nos prestations couvrent l entretien regulier, le grand nettoyage, la vitrerie, les textiles,
-              la desinfection, les fins de chantier et les besoins professionnels. Chaque intervention est preparee
-              avec un planning clair, une equipe adaptee et un controle qualite.
+          <div className="text-center mb-5">
+            <span className="badge px-3 py-2 rounded-pill mb-2" style={{ background: '#e1f2ff', color: '#04508d', fontWeight: 700, fontSize: '0.85rem' }}>
+              <i className="bi bi-stars me-1" /> NOS PRESTATIONS PROFESSIONNELLES
+            </span>
+            <h2 className="section-title">Nos Services de Nettoyage</h2>
+            <p className="section-copy mx-auto" style={{ maxWidth: '680px' }}>
+              Une gamme complète de prestations de nettoyage professionnel adaptées aux particuliers, entreprises, commerces et chantiers avec un standard de qualité rigoureux.
             </p>
-            <div className="transport-chip-wrap">
-              {categories.map((item) => (
-                <span key={item} className="transport-chip">{item}</span>
-              ))}
-            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="section service-catalog-section">
-        <div className="container">
-          {categories.map((category) => (
-            <div className="service-catalog-group mb-5" key={category}>
-              <h3 className="service-catalog-title">{category}</h3>
-              <div className="row g-4 mt-1">
-                {serviceCatalog.filter((item) => item.category === category).map((item, idx) => (
-                  <motion.div
-                    className="col-md-6 col-xl-4"
-                    key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.05 }}
-                  >
-                    <div className="service-catalog-card h-100">
-                      <ServiceCardImage service={item} defaultIdx={idx} />
-                      <div className="service-catalog-body">
-                        <span className="service-catalog-icon"><i className={`bi ${item.icon}`} /></span>
-                        <h5>{item.title}</h5>
-                        <p>{item.description}</p>
-                        {item.slug ? (
-                          <Link to={`/services/${item.slug}`} className="btn btn-sm btn-outline-primary mt-3 rounded-pill fw-bold w-100">
-                            Voir Détails & Devis <i className="bi bi-arrow-right ms-1" />
-                          </Link>
-                        ) : (
-                          <button
-                            type="button"
-                            onClick={() => window.dispatchEvent(new CustomEvent('cmpf-open-book-panel', { detail: { service: item.title } }))}
-                            className="btn btn-sm btn-outline-secondary mt-3 rounded-pill fw-bold w-100"
-                          >
-                            Demander un Devis <i className="bi bi-arrow-right ms-1" />
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <div className="row g-4 mt-2">
+            {content.services.map((service, idx) => (
+              <motion.div
+                key={service.title}
+                className="col-12 col-md-6 col-lg-4"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 3) * 0.1, duration: 0.4 }}
+              >
+                <div className="home-service-card h-100">
+                  <ServiceCardImage service={service} defaultIdx={idx} />
+                  <div className="home-service-body">
+                    <h5>{service.title}</h5>
+                    <p>{service.description}</p>
+                    <Link
+                      to={service.slug ? `/services/${service.slug}` : '/services'}
+                      className="home-service-btn"
+                    >
+                      <span>Voir Détails & Devis</span>
+                      <i className="bi bi-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
