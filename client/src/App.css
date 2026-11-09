@@ -2963,6 +2963,211 @@ body {
   margin-bottom: 12px;
 }
 
+/* ===================================================
+   Services Page: Team & Equipment Showcase Sections
+   =================================================== */
+.showcase-section {
+  padding: 70px 0;
+  position: relative;
+}
+
+.showcase-section-light {
+  background: #f8fafc;
+}
+
+.showcase-section-white {
+  background: #ffffff;
+}
+
+.showcase-img-mosaic {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(4, 80, 141, 0.14);
+}
+
+.showcase-main-photo {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.showcase-img-mosaic:hover .showcase-main-photo {
+  transform: scale(1.03);
+}
+
+.showcase-float-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.showcase-float-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #04508d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.showcase-sub-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.showcase-sub-img-wrap {
+  position: relative;
+  height: 140px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.showcase-sub-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.showcase-sub-img-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.showcase-sub-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 12px 10px 6px;
+  text-align: center;
+}
+
+.showcase-feature-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+
+.showcase-feature-box:hover {
+  transform: translateY(-3px);
+  border-color: #00d2c4;
+  box-shadow: 0 10px 24px rgba(0, 210, 196, 0.12);
+}
+
+.showcase-feature-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  background: #e1f2ff;
+  color: #04508d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.equipment-showcase-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment-showcase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(4, 80, 141, 0.12);
+  border-color: #00d2c4;
+}
+
+.equipment-card-img-wrap {
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+
+.equipment-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.equipment-showcase-card:hover .equipment-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.equipment-badge-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(4, 80, 141, 0.88);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.equipment-card-content {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .showcase-main-photo {
+    height: 280px;
+  }
+  .showcase-float-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: -30px;
+    z-index: 2;
+  }
+}
+
+
 
 
 
