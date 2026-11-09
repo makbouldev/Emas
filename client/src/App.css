@@ -2514,3 +2514,71 @@ body {
   box-shadow: 0 4px 12px rgba(4, 80, 141, 0.25);
 }
 
+/* Service Image Carousel Arrows & Dots */
+.service-img-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #04508d;
+  border: 1px solid rgba(4, 80, 141, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+.service-img-arrow:hover {
+  background: #04508d;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 6px 16px rgba(4, 80, 141, 0.35);
+}
+
+.service-img-arrow-left {
+  left: 10px;
+}
+
+.service-img-arrow-right {
+  right: 10px;
+}
+
+.service-img-dots {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.52);
+  padding: 4px 8px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.service-img-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  padding: 0;
+}
+
+.service-img-dot.active {
+  background: #00d2c4;
+  width: 18px;
+  border-radius: 10px;
+}
+
+

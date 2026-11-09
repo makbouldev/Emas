@@ -16,7 +16,12 @@ export const fallbackData = {
       title: 'Nettoyage de Vitres',
       description: 'Lavage professionnel de vitres, vitrines de magasins, baies vitrees et facades avec equipement adapte et finition sans traces.',
       icon: 'bi-window',
-      image: '/services/vitres.jpg'
+      image: '/services/vitres-1.jpg',
+      images: [
+        '/services/vitres-1.jpg',
+        '/services/vitres-2.png',
+        '/services/vitres-3.jpg'
+      ]
     },
     {
       title: 'Canapes, Tapis et Moquettes',

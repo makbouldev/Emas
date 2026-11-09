@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useSiteData } from '../context/SiteDataContext';
 import Seo from '../components/Seo';
+import ServiceCardImage from '../components/ServiceCardImage';
 import { buildBreadcrumbSchema, buildFaqSchema, buildWebPageSchema } from '../seo/schemas';
 
 const serviceCatalog = [
@@ -65,7 +66,12 @@ const serviceCatalog = [
     title: 'Vitrerie et Facades',
     icon: 'bi-window',
     category: 'Technique',
-    image: '/services/vitres.jpg',
+    image: '/services/vitres-1.jpg',
+    images: [
+      '/services/vitres-1.jpg',
+      '/services/vitres-2.png',
+      '/services/vitres-3.jpg'
+    ],
     description: 'Vitres, baies, vitrines et facades avec materiel adapte et finition sans traces.'
   },
   {
@@ -173,7 +179,7 @@ function ServicesPage() {
                     transition={{ delay: idx * 0.05 }}
                   >
                     <div className="service-catalog-card h-100">
-                      <img src={item.image} alt={item.title} className="service-catalog-image" />
+                      <ServiceCardImage service={item} defaultIdx={idx} />
                       <div className="service-catalog-body">
                         <span className="service-catalog-icon"><i className={`bi ${item.icon}`} /></span>
                         <h5>{item.title}</h5>

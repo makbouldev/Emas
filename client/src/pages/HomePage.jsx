@@ -5,6 +5,7 @@ import { useSiteData } from '../context/SiteDataContext';
 import heroImage from '../assets/hero.jpeg';
 import Seo from '../components/Seo';
 import { resolveMediaPath } from '../utils/resolveMediaPath';
+import ServiceCardImage from '../components/ServiceCardImage';
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
@@ -203,17 +204,7 @@ function HomePage() {
                 transition={{ delay: (idx % 3) * 0.1, duration: 0.4 }}
               >
                 <div className="home-service-card h-100">
-                  <div className="home-service-image-wrap">
-                    <img
-                      src={resolveMediaPath(service.image || `/${(idx % 10) + 1}.jpeg`)}
-                      alt={service.title}
-                      className="home-service-img"
-                      loading="lazy"
-                    />
-                    <div className="home-service-badge">
-                      <i className={`bi ${service.icon || 'bi-stars'}`} />
-                    </div>
-                  </div>
+                  <ServiceCardImage service={service} defaultIdx={idx} />
                   <div className="home-service-body">
                     <h5>{service.title}</h5>
                     <p>{service.description}</p>
