@@ -71,7 +71,12 @@ export const fallbackData = {
       title: 'Nettoyage de Bureaux et Locaux',
       description: 'Entretien quotidien ou periodique des espaces de travail, open spaces, salles de reunion, commerces et sanitaires professionnels.',
       icon: 'bi-building-check',
-      image: '/services/bureaux.jpg'
+      image: '/services/bureaux-1.png',
+      images: [
+        '/services/bureaux-1.png',
+        '/services/bureaux-2.png',
+        '/services/bureaux-3.png'
+      ]
     },
     {
       title: 'Nettoyage a Domicile',

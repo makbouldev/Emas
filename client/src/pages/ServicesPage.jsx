@@ -41,7 +41,12 @@ const serviceCatalog = [
     title: 'Nettoyage Bureaux',
     icon: 'bi-building-check',
     category: 'Professionnel',
-    image: '/services/bureaux.jpg',
+    image: '/services/bureaux-1.png',
+    images: [
+      '/services/bureaux-1.png',
+      '/services/bureaux-2.png',
+      '/services/bureaux-3.png'
+    ],
     description: 'Entretien regulier des bureaux, open spaces, salles de reunion et sanitaires.'
   },
   {
