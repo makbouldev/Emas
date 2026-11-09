@@ -28,7 +28,12 @@
       "title": "Canapes, Tapis et Moquettes",
       "description": "Nettoyage en profondeur par injection-extraction, elimination des taches tenaces, acariens et odeurs sur tous textiles d interieur.",
       "icon": "bi-brush",
-      "image": "/services/canapes-tapis.jpg"
+      "image": "/services/canapes-1.jpg",
+      "images": [
+        "/services/canapes-1.jpg",
+        "/services/canapes-2.jpg",
+        "/services/canapes-3.jpg"
+      ]
     },
     {
       "title": "Grand Menage",

@@ -2,11 +2,14 @@ import { useState } from 'react';
 import { resolveMediaPath } from '../utils/resolveMediaPath';
 
 function ServiceCardImage({ service, defaultIdx = 0 }) {
+  const serviceTitle = (service.title || '').toLowerCase();
   const images = (Array.isArray(service.images) && service.images.length > 0)
     ? service.images
-    : (service.title && service.title.toLowerCase().includes('vitre')
+    : (serviceTitle.includes('vitre')
       ? ['/services/vitres-1.jpg', '/services/vitres-2.png', '/services/vitres-3.jpg']
-      : [service.image || `/${(defaultIdx % 10) + 1}.jpeg`]);
+      : (serviceTitle.includes('canape') || serviceTitle.includes('tapis')
+        ? ['/services/canapes-1.jpg', '/services/canapes-2.jpg', '/services/canapes-3.jpg']
+        : [service.image || `/${(defaultIdx % 10) + 1}.jpeg`]));
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

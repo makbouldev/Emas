@@ -24,7 +24,12 @@ const serviceCatalog = [
     title: 'Canapes et Tapis',
     icon: 'bi-brush-fill',
     category: 'Domicile',
-    image: '/services/canapes-tapis.jpg',
+    image: '/services/canapes-1.jpg',
+    images: [
+      '/services/canapes-1.jpg',
+      '/services/canapes-2.jpg',
+      '/services/canapes-3.jpg'
+    ],
     description: 'Shampooing, aspiration, traitement des taches et rafraichissement des textiles.'
   },
   {
