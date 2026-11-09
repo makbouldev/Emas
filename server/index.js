@@ -72,6 +72,7 @@ const defaultSiteContent = {
   },
   services: [
     {
+      slug: 'nettoyage-de-vitres',
       title: 'Nettoyage de Vitres',
       description: 'Lavage professionnel de vitres, vitrines de magasins, baies vitrees et facades avec equipement adapte et finition sans traces.',
       icon: 'bi-window',
@@ -83,6 +84,7 @@ const defaultSiteContent = {
       ]
     },
     {
+      slug: 'canapes-tapis-moquettes',
       title: 'Canapes, Tapis et Moquettes',
       description: 'Nettoyage en profondeur par injection-extraction, elimination des taches tenaces, acariens et odeurs sur tous textiles d interieur.',
       icon: 'bi-brush',
@@ -94,6 +96,7 @@ const defaultSiteContent = {
       ]
     },
     {
+      slug: 'grand-menage',
       title: 'Grand Menage',
       description: 'Remise en propre integrale et approfondie pour appartements et villas, avant ou apres demenagement, fetes ou longue fermeture.',
       icon: 'bi-stars',
@@ -105,6 +108,7 @@ const defaultSiteContent = {
       ]
     },
     {
+      slug: 'nettoyage-fin-de-chantier',
       title: 'Nettoyage Fin de Chantier',
       description: 'Evacuation de poussiere fine, decapage des sols, elimination des traces de peinture, ciment et platre pour un espace pret a habiter.',
       icon: 'bi-cone-striped',
@@ -116,6 +120,7 @@ const defaultSiteContent = {
       ]
     },
     {
+      slug: 'traitement-cristallisation-des-sols',
       title: 'Traitement et Cristallisation des Sols',
       description: 'Decapage approfondi, poncage, lustrage et cristallisation pour redonner eclat et brillance au marbre, carrelage et parquets.',
       icon: 'bi-grid-3x3-gap-fill',
@@ -127,6 +132,7 @@ const defaultSiteContent = {
       ]
     },
     {
+      slug: 'nettoyage-de-bureaux',
       title: 'Nettoyage de Bureaux et Locaux',
       description: 'Entretien quotidien ou periodique des espaces de travail, open spaces, salles de reunion, commerces et sanitaires professionnels.',
       icon: 'bi-building-check',

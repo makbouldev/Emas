@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getServiceBySlug, detailedServices } from '../data/servicesData';
@@ -16,6 +16,12 @@ function ServiceDetailPage() {
   const { content } = useSiteData();
   const [activeImgIndex, setActiveImgIndex] = useState(0);
   const [openFaq, setOpenFaq] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setActiveImgIndex(0);
+    setOpenFaq(0);
+  }, [slug]);
 
   const service = getServiceBySlug(slug);
 

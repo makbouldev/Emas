@@ -4,6 +4,7 @@ import { useSiteData } from '../context/SiteDataContext';
 import Seo from '../components/Seo';
 import ServiceCardImage from '../components/ServiceCardImage';
 import { buildBreadcrumbSchema, buildFaqSchema, buildWebPageSchema } from '../seo/schemas';
+import { getServiceSlug } from '../data/servicesData';
 
 const faqs = [
   { q: 'Intervenez-vous 7j/7 ?', a: 'Oui, EMAS Nettoyage organise les passages selon vos contraintes, y compris tot le matin, le soir ou le week-end.' },
@@ -72,7 +73,7 @@ function ServicesPage() {
                     <h5>{service.title}</h5>
                     <p>{service.description}</p>
                     <Link
-                      to={service.slug ? `/services/${service.slug}` : '/services'}
+                      to={`/services/${getServiceSlug(service)}`}
                       className="home-service-btn"
                     >
                       <span>Voir Détails & Devis</span>

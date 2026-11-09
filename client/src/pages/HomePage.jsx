@@ -6,6 +6,7 @@ import heroImage from '../assets/hero.jpeg';
 import Seo from '../components/Seo';
 import { resolveMediaPath } from '../utils/resolveMediaPath';
 import ServiceCardImage from '../components/ServiceCardImage';
+import { getServiceSlug } from '../data/servicesData';
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
@@ -283,7 +284,7 @@ function HomePage() {
                     <h5>{service.title}</h5>
                     <p>{service.description}</p>
                     <Link
-                      to={service.slug ? `/services/${service.slug}` : '/services'}
+                      to={`/services/${getServiceSlug(service)}`}
                       className="home-service-btn"
                     >
                       <span>Voir Détails & Devis</span>

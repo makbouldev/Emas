@@ -337,5 +337,38 @@ export const detailedServices = [
 ];
 
 export const getServiceBySlug = (slug) => {
-  return detailedServices.find((s) => s.slug === slug);
+  if (!slug) return detailedServices[0];
+  const normalized = String(slug).toLowerCase().trim();
+  return (
+    detailedServices.find((s) => s.slug === normalized) ||
+    detailedServices.find((s) => s.title.toLowerCase().includes(normalized)) ||
+    detailedServices[0]
+  );
+};
+
+export const getServiceSlug = (serviceOrTitle) => {
+  if (typeof serviceOrTitle === 'object' && serviceOrTitle !== null) {
+    if (serviceOrTitle.slug) return serviceOrTitle.slug;
+    return getServiceSlug(serviceOrTitle.title);
+  }
+  const text = String(serviceOrTitle || '').toLowerCase().trim();
+  if (text.includes('vitre') || text.includes('facade') || text.includes('fenetre')) {
+    return 'nettoyage-de-vitres';
+  }
+  if (text.includes('canape') || text.includes('tapis') || text.includes('moquette') || text.includes('textile') || text.includes('fauteuil')) {
+    return 'canapes-tapis-moquettes';
+  }
+  if (text.includes('grand') || text.includes('menage') || text.includes('domicile')) {
+    return 'grand-menage';
+  }
+  if (text.includes('chantier') || text.includes('travaux')) {
+    return 'nettoyage-fin-de-chantier';
+  }
+  if (text.includes('sol') || text.includes('cristallisation') || text.includes('marbre') || text.includes('carrelage')) {
+    return 'traitement-cristallisation-des-sols';
+  }
+  if (text.includes('bureau') || text.includes('local') || text.includes('locaux') || text.includes('commerce') || text.includes('entreprise')) {
+    return 'nettoyage-de-bureaux';
+  }
+  return 'nettoyage-de-vitres';
 };
