@@ -275,7 +275,10 @@ function HomePage() {
                   <div className="home-service-body">
                     <h5>{service.title}</h5>
                     <p>{service.description}</p>
-                    <Link to="/services" className="home-service-btn">
+                    <Link
+                      to={service.slug ? `/services/${service.slug}` : '/services'}
+                      className="home-service-btn"
+                    >
                       <span>Voir Détails & Devis</span>
                       <i className="bi bi-arrow-right" />
                     </Link>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-const SITE_NAME = 'EMAS Assistance';
-const DEFAULT_SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://cmpfambulance.ma').replace(/\/+$/, '');
+const SITE_NAME = 'EMAS Nettoyage';
+const DEFAULT_SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://emas-nettoyage.vercel.app').replace(/\/+$/, '');
 const DEFAULT_IMAGE = `${DEFAULT_SITE_URL}/logo.png`;
 
 const setMetaTag = (name, content, isProperty = false) => {

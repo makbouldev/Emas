@@ -14,6 +14,7 @@ const serviceCatalog = [
     description: 'Entretien des appartements, villas, cuisines, sanitaires, chambres et espaces de vie.'
   },
   {
+    slug: 'grand-menage',
     title: 'Grand Nettoyage',
     icon: 'bi-stars',
     category: 'Domicile',
@@ -26,6 +27,7 @@ const serviceCatalog = [
     description: 'Nettoyage approfondi apres demenagement, reception, travaux legers ou longue absence.'
   },
   {
+    slug: 'canapes-tapis-moquettes',
     title: 'Canapes et Tapis',
     icon: 'bi-brush-fill',
     category: 'Domicile',
@@ -38,6 +40,7 @@ const serviceCatalog = [
     description: 'Shampooing, aspiration, traitement des taches et rafraichissement des textiles.'
   },
   {
+    slug: 'nettoyage-de-bureaux',
     title: 'Nettoyage Bureaux',
     icon: 'bi-building-check',
     category: 'Professionnel',
@@ -64,6 +67,7 @@ const serviceCatalog = [
     description: 'Halls, escaliers, ascenseurs, parkings, locaux techniques et sorties des poubelles.'
   },
   {
+    slug: 'nettoyage-fin-de-chantier',
     title: 'Nettoyage Fin de Chantier',
     icon: 'bi-cone-striped',
     category: 'Technique',
@@ -76,6 +80,7 @@ const serviceCatalog = [
     description: 'Poussiere fine, traces de peinture, vitres, sols et remise en propre avant livraison.'
   },
   {
+    slug: 'traitement-cristallisation-des-sols',
     title: 'Traitement et Cristallisation des Sols',
     icon: 'bi-grid-3x3-gap-fill',
     category: 'Technique',
@@ -88,6 +93,7 @@ const serviceCatalog = [
     description: 'Decapage, poncage, lustrage et cristallisation du marbre, carrelage et parquets.'
   },
   {
+    slug: 'nettoyage-de-vitres',
     title: 'Vitrerie et Facades',
     icon: 'bi-window',
     category: 'Technique',
@@ -209,6 +215,19 @@ function ServicesPage() {
                         <span className="service-catalog-icon"><i className={`bi ${item.icon}`} /></span>
                         <h5>{item.title}</h5>
                         <p>{item.description}</p>
+                        {item.slug ? (
+                          <Link to={`/services/${item.slug}`} className="btn btn-sm btn-outline-primary mt-3 rounded-pill fw-bold w-100">
+                            Voir Détails & Devis <i className="bi bi-arrow-right ms-1" />
+                          </Link>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => window.dispatchEvent(new CustomEvent('cmpf-open-book-panel', { detail: { service: item.title } }))}
+                            className="btn btn-sm btn-outline-secondary mt-3 rounded-pill fw-bold w-100"
+                          >
+                            Demander un Devis <i className="bi bi-arrow-right ms-1" />
+                          </button>
+                        )}
                       </div>
                     </div>
                   </motion.div>

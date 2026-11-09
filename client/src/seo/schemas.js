@@ -1,5 +1,5 @@
-const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://cmpfambulance.ma').replace(/\/+$/, '');
-const COMPANY_NAME = 'EMAS Assistance';
+const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://emas-nettoyage.vercel.app').replace(/\/+$/, '');
+const COMPANY_NAME = 'EMAS Nettoyage';
 
 const toAbsoluteUrl = (path = '/') => {
   if (path.startsWith('http')) return path;
@@ -9,15 +9,16 @@ const toAbsoluteUrl = (path = '/') => {
 
 export const buildOrganizationSchema = (content) => ({
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
+  '@type': 'CleaningService',
   '@id': `${SITE_URL}#organization`,
-  name: content.company || COMPANY_NAME,
+  name: content?.company || COMPANY_NAME,
   url: SITE_URL,
   logo: toAbsoluteUrl('/logo.png'),
   image: content?.hero?.backgroundImage || toAbsoluteUrl('/logo.png'),
-  telephone: content.phone,
-  email: content.email,
-  areaServed: ['Agadir', 'Casablanca', 'Fes', 'Laayoune', 'Marrakech', 'Meknes', 'Nador', 'Ouarzazate', 'Oujda', 'Rabat', 'Tanger', 'Tetouan'],
+  telephone: content?.phone || '+212 725 57 25 50',
+  email: content?.email || 'noureddinema03@gmail.com',
+  priceRange: 'MAD',
+  areaServed: ['Casablanca', 'Rabat', 'Mohammedia', 'Marrakech', 'Tanger', 'Agadir', 'Fes', 'Maroc'],
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'MA'
@@ -55,6 +56,30 @@ export const buildBreadcrumbSchema = (items) => ({
     name: item.name,
     item: toAbsoluteUrl(item.path)
   }))
+});
+
+export const buildServiceSchema = ({ name, description, path = '/', image, serviceType }) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${toAbsoluteUrl(path)}#service`,
+  name,
+  serviceType: serviceType || name,
+  description,
+  url: toAbsoluteUrl(path),
+  image: image ? toAbsoluteUrl(image) : undefined,
+  provider: {
+    '@type': 'CleaningService',
+    '@id': `${SITE_URL}#organization`,
+    name: COMPANY_NAME,
+    telephone: '+212 725 57 25 50',
+    url: SITE_URL
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Casablanca' },
+    { '@type': 'City', name: 'Rabat' },
+    { '@type': 'City', name: 'Mohammedia' },
+    { '@type': 'Country', name: 'Maroc' }
+  ]
 });
 
 export const buildFaqSchema = (faqs) => ({
