@@ -9,91 +9,91 @@ const serviceCatalog = [
     title: 'Nettoyage a Domicile',
     icon: 'bi-house-check-fill',
     category: 'Domicile',
-    image: '1.jpeg',
+    image: '/services/domicile.jpg',
     description: 'Entretien des appartements, villas, cuisines, sanitaires, chambres et espaces de vie.'
   },
   {
     title: 'Grand Nettoyage',
     icon: 'bi-stars',
     category: 'Domicile',
-    image: '2.jpeg',
+    image: '/services/grand-menage.jpg',
     description: 'Nettoyage approfondi apres demenagement, reception, travaux legers ou longue absence.'
   },
   {
     title: 'Canapes et Tapis',
     icon: 'bi-brush-fill',
     category: 'Domicile',
-    image: '3.jpeg',
+    image: '/services/canapes-tapis.jpg',
     description: 'Shampooing, aspiration, traitement des taches et rafraichissement des textiles.'
   },
   {
     title: 'Nettoyage Bureaux',
     icon: 'bi-building-check',
     category: 'Professionnel',
-    image: '4.jpeg',
+    image: '/services/bureaux.jpg',
     description: 'Entretien regulier des bureaux, open spaces, salles de reunion et sanitaires.'
   },
   {
     title: 'Commerces et Showrooms',
     icon: 'bi-shop',
     category: 'Professionnel',
-    image: '5.jpeg',
+    image: '/services/bureaux.jpg',
     description: 'Nettoyage de vitrines, sols, rayons, comptoirs et zones clients avant ouverture.'
   },
   {
     title: 'Syndics et Espaces Communs',
     icon: 'bi-door-open-fill',
     category: 'Professionnel',
-    image: '6.jpeg',
+    image: '/services/sols.jpg',
     description: 'Halls, escaliers, ascenseurs, parkings, locaux techniques et sorties des poubelles.'
   },
   {
     title: 'Nettoyage Fin de Chantier',
     icon: 'bi-cone-striped',
     category: 'Technique',
-    image: '7.jpeg',
+    image: '/services/fin-de-chantier.jpg',
     description: 'Poussiere fine, traces de peinture, vitres, sols et remise en propre avant livraison.'
   },
   {
     title: 'Traitement et Cristallisation des Sols',
     icon: 'bi-grid-3x3-gap-fill',
     category: 'Technique',
-    image: '5.jpeg',
+    image: '/services/sols.jpg',
     description: 'Decapage, poncage, lustrage et cristallisation du marbre, carrelage et parquets.'
   },
   {
     title: 'Vitrerie et Facades',
     icon: 'bi-window',
     category: 'Technique',
-    image: '8.jpeg',
+    image: '/services/vitres.jpg',
     description: 'Vitres, baies, vitrines et facades avec materiel adapte et finition sans traces.'
   },
   {
     title: 'Desinfection',
     icon: 'bi-shield-check',
     category: 'Technique',
-    image: '9.jpeg',
+    image: '/services/desinfection.jpg',
     description: 'Desinfection ciblee des surfaces, sanitaires, cuisines et zones sensibles.'
   },
   {
     title: 'Nettoyage Evenementiel',
     icon: 'bi-calendar-check-fill',
     category: 'Evenementiel',
-    image: '10.jpeg',
+    image: '/services/facades.jpg',
     description: 'Equipe avant, pendant et apres salons, receptions, conferences et evenements publics.'
   },
   {
     title: 'Contrats Reguliers',
     icon: 'bi-repeat',
     category: 'Evenementiel',
-    image: '1.jpeg',
+    image: '/services/domicile.jpg',
     description: 'Planning quotidien, hebdomadaire ou mensuel avec suivi, reporting et controle qualite.'
   },
   {
     title: 'Intervention Express',
     icon: 'bi-lightning-charge-fill',
     category: 'Evenementiel',
-    image: '2.jpeg',
+    image: '/services/vitres.jpg',
     description: 'Equipe mobilisee rapidement pour remise en etat urgente ou preparation d un lieu.'
   }
 ];

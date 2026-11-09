@@ -75,55 +75,55 @@ const defaultSiteContent = {
       title: 'Nettoyage de Vitres',
       description: 'Lavage professionnel de vitres, vitrines de magasins, baies vitrees et facades avec equipement adapte et finition sans traces.',
       icon: 'bi-window',
-      image: '/8.jpeg'
+      image: '/services/vitres.jpg'
     },
     {
       title: 'Canapes, Tapis et Moquettes',
       description: 'Nettoyage en profondeur par injection-extraction, elimination des taches tenaces, acariens et odeurs sur tous textiles d interieur.',
       icon: 'bi-brush',
-      image: '/3.jpeg'
+      image: '/services/canapes-tapis.jpg'
     },
     {
       title: 'Grand Menage',
       description: 'Remise en propre integrale et approfondie pour appartements et villas, avant ou apres demenagement, fetes ou longue fermeture.',
       icon: 'bi-stars',
-      image: '/2.jpeg'
+      image: '/services/grand-menage.jpg'
     },
     {
       title: 'Nettoyage Fin de Chantier',
       description: 'Evacuation de poussiere fine, decapage des sols, elimination des traces de peinture, ciment et platre pour un espace pret a habiter.',
       icon: 'bi-cone-striped',
-      image: '/7.jpeg'
+      image: '/services/fin-de-chantier.jpg'
     },
     {
       title: 'Traitement et Cristallisation des Sols',
       description: 'Decapage approfondi, poncage, lustrage et cristallisation pour redonner eclat et brillance au marbre, carrelage et parquets.',
       icon: 'bi-grid-3x3-gap-fill',
-      image: '/5.jpeg'
+      image: '/services/sols.jpg'
     },
     {
       title: 'Nettoyage de Bureaux et Locaux',
       description: 'Entretien quotidien ou periodique des espaces de travail, open spaces, salles de reunion, commerces et sanitaires professionnels.',
       icon: 'bi-building-check',
-      image: '/4.jpeg'
+      image: '/services/bureaux.jpg'
     },
     {
       title: 'Nettoyage a Domicile',
       description: 'Entretien soigne et regulier de votre maison ou villa par des agents de confiance, avec planning et produits adaptes.',
       icon: 'bi-house-check',
-      image: '/1.jpeg'
+      image: '/services/domicile.jpg'
     },
     {
       title: 'Desinfection et Deratisation (3D)',
       description: 'Desinfection antibacterienne, deratisation et desinsectisation certifiee pour locaux professionnels, restaurants et habitations.',
       icon: 'bi-shield-check',
-      image: '/9.jpeg'
+      image: '/services/desinfection.jpg'
     },
     {
       title: 'Nettoyage Facades et Enseignes',
       description: 'Lavage haute pression, bardages exterieurs, devantures et enseignes pour valoriser l image de votre batiment ou commerce.',
       icon: 'bi-layers-half',
-      image: '/10.jpeg'
+      image: '/services/facades.jpg'
     }
   ],
   story: {
