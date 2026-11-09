@@ -108,7 +108,12 @@ const defaultSiteContent = {
       title: 'Nettoyage Fin de Chantier',
       description: 'Evacuation de poussiere fine, decapage des sols, elimination des traces de peinture, ciment et platre pour un espace pret a habiter.',
       icon: 'bi-cone-striped',
-      image: '/services/fin-de-chantier.jpg'
+      image: '/services/chantier-1.jpg',
+      images: [
+        '/services/chantier-1.jpg',
+        '/services/chantier-2.jpg',
+        '/services/chantier-3.png'
+      ]
     },
     {
       title: 'Traitement et Cristallisation des Sols',

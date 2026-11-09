@@ -9,9 +9,11 @@ function ServiceCardImage({ service, defaultIdx = 0 }) {
       ? ['/services/vitres-1.jpg', '/services/vitres-2.png', '/services/vitres-3.jpg']
       : (serviceTitle.includes('canape') || serviceTitle.includes('tapis')
         ? ['/services/canapes-1.jpg', '/services/canapes-2.jpg', '/services/canapes-3.jpg']
-        : (serviceTitle.includes('grand') || serviceTitle.includes('menage')
-          ? ['/services/grand-menage-1.png', '/services/grand-menage-2.jpg', '/services/grand-menage-3.png']
-          : [service.image || `/${(defaultIdx % 10) + 1}.jpeg`])));
+        : (serviceTitle.includes('chantier')
+          ? ['/services/chantier-1.jpg', '/services/chantier-2.jpg', '/services/chantier-3.png']
+          : (serviceTitle.includes('grand') || serviceTitle.includes('menage')
+            ? ['/services/grand-menage-1.png', '/services/grand-menage-2.jpg', '/services/grand-menage-3.png']
+            : [service.image || `/${(defaultIdx % 10) + 1}.jpeg`]))));
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

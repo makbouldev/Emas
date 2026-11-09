@@ -62,7 +62,12 @@ const serviceCatalog = [
     title: 'Nettoyage Fin de Chantier',
     icon: 'bi-cone-striped',
     category: 'Technique',
-    image: '/services/fin-de-chantier.jpg',
+    image: '/services/chantier-1.jpg',
+    images: [
+      '/services/chantier-1.jpg',
+      '/services/chantier-2.jpg',
+      '/services/chantier-3.png'
+    ],
     description: 'Poussiere fine, traces de peinture, vitres, sols et remise en propre avant livraison.'
   },
   {
