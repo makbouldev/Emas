@@ -180,19 +180,58 @@ function HomePage() {
       </section>
 
       <div className="home-creative">
-      <section className="section services-section">
+      <section className="section services-section" id="services">
         <div className="container">
-          <h2 className="section-title">Services de Nettoyage</h2>
+          <div className="text-center mb-5">
+            <span className="badge px-3 py-2 rounded-pill mb-2" style={{ background: '#e1f2ff', color: '#04508d', fontWeight: 700, fontSize: '0.85rem' }}>
+              <i className="bi bi-stars me-1" /> NOS PRESTATIONS PROFESSIONNELLES
+            </span>
+            <h2 className="section-title">Services de Nettoyage</h2>
+            <p className="section-copy mx-auto" style={{ maxWidth: '680px' }}>
+              Une gamme complete de prestations de nettoyage professionnel adaptees aux particuliers, entreprises, commerces et chantiers avec un standard de qualite rigoureux.
+            </p>
+          </div>
+
           <div className="row g-4 mt-2">
-            {content.services.slice(0, 4).map((service, idx) => (
-              <motion.div key={service.title} className="col-12 col-md-6 col-lg-3" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}>
-                <div className="service-card h-100">
-                  <i className={`bi ${service.icon} service-icon`} />
-                  <h5>{service.title}</h5>
-                  <p>{service.description}</p>
+            {content.services.map((service, idx) => (
+              <motion.div
+                key={service.title}
+                className="col-12 col-md-6 col-lg-4"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 3) * 0.1, duration: 0.4 }}
+              >
+                <div className="home-service-card h-100">
+                  <div className="home-service-image-wrap">
+                    <img
+                      src={resolveMediaPath(service.image || `/${(idx % 10) + 1}.jpeg`)}
+                      alt={service.title}
+                      className="home-service-img"
+                      loading="lazy"
+                    />
+                    <div className="home-service-badge">
+                      <i className={`bi ${service.icon || 'bi-stars'}`} />
+                    </div>
+                  </div>
+                  <div className="home-service-body">
+                    <h5>{service.title}</h5>
+                    <p>{service.description}</p>
+                    <Link to="/services" className="home-service-btn">
+                      <span>Voir Détails & Devis</span>
+                      <i className="bi bi-arrow-right" />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="text-center mt-5">
+            <Link to="/services" className="btn btn-emergency btn-lg px-5 py-3 shadow-sm rounded-pill fw-bold">
+              <i className="bi bi-grid-fill me-2" />
+              Découvrir Tous Nos Services & Tarifs
+            </Link>
           </div>
         </div>
       </section>

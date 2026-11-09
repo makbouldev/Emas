@@ -55,6 +55,13 @@ const serviceCatalog = [
     description: 'Poussiere fine, traces de peinture, vitres, sols et remise en propre avant livraison.'
   },
   {
+    title: 'Traitement et Cristallisation des Sols',
+    icon: 'bi-grid-3x3-gap-fill',
+    category: 'Technique',
+    image: '5.jpeg',
+    description: 'Decapage, poncage, lustrage et cristallisation du marbre, carrelage et parquets.'
+  },
+  {
     title: 'Vitrerie et Facades',
     icon: 'bi-window',
     category: 'Technique',

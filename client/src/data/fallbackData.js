@@ -13,44 +13,58 @@ export const fallbackData = {
   },
   services: [
     {
-      title: 'Nettoyage a Domicile',
-      description: 'Entretien regulier ou ponctuel des appartements, villas et residences avec une equipe soigneuse.',
-      icon: 'bi-house-check'
-    },
-    {
-      title: 'Nettoyage Bureaux',
-      description: 'Nettoyage quotidien ou hebdomadaire des bureaux, open spaces, sanitaires et espaces communs.',
-      icon: 'bi-building-check'
-    },
-    {
-      title: 'Grand Nettoyage',
-      description: 'Remise en propre approfondie apres demenagement, travaux, reception ou longue fermeture.',
-      icon: 'bi-stars'
-    },
-    {
-      title: 'Nettoyage Fin de Chantier',
-      description: 'Evacuation des poussieres, traces, vitres et sols apres travaux pour livrer un espace pret a utiliser.',
-      icon: 'bi-cone-striped'
+      title: 'Nettoyage de Vitres',
+      description: 'Lavage professionnel de vitres, vitrines de magasins, baies vitrees et facades avec equipement adapte et finition sans traces.',
+      icon: 'bi-window',
+      image: '/8.jpeg'
     },
     {
       title: 'Canapes, Tapis et Moquettes',
-      description: 'Shampooing, aspiration professionnelle et traitement des taches pour textiles d interieur.',
-      icon: 'bi-brush'
+      description: 'Nettoyage en profondeur par injection-extraction, elimination des taches tenaces, acariens et odeurs sur tous textiles d interieur.',
+      icon: 'bi-brush',
+      image: '/3.jpeg'
     },
     {
-      title: 'Vitrerie et Facades',
-      description: 'Nettoyage des vitres, vitrines et facades avec materiel securise et finition sans traces.',
-      icon: 'bi-window'
+      title: 'Grand Menage',
+      description: 'Remise en propre integrale et approfondie pour appartements et villas, avant ou apres demenagement, fetes ou longue fermeture.',
+      icon: 'bi-stars',
+      image: '/2.jpeg'
     },
     {
-      title: 'Desinfection des Espaces',
-      description: 'Desinfection ciblee des surfaces, sanitaires, cuisines, salles d attente et zones sensibles.',
-      icon: 'bi-shield-check'
+      title: 'Nettoyage Fin de Chantier',
+      description: 'Evacuation de poussiere fine, decapage des sols, elimination des traces de peinture, ciment et platre pour un espace pret a habiter.',
+      icon: 'bi-cone-striped',
+      image: '/7.jpeg'
     },
     {
-      title: 'Nettoyage Evenementiel',
-      description: 'Equipe avant, pendant et apres vos evenements pour garder les lieux propres et accueillants.',
-      icon: 'bi-calendar-check'
+      title: 'Traitement et Cristallisation des Sols',
+      description: 'Decapage approfondi, poncage, lustrage et cristallisation pour redonner eclat et brillance au marbre, carrelage et parquets.',
+      icon: 'bi-grid-3x3-gap-fill',
+      image: '/5.jpeg'
+    },
+    {
+      title: 'Nettoyage de Bureaux et Locaux',
+      description: 'Entretien quotidien ou periodique des espaces de travail, open spaces, salles de reunion, commerces et sanitaires professionnels.',
+      icon: 'bi-building-check',
+      image: '/4.jpeg'
+    },
+    {
+      title: 'Nettoyage a Domicile',
+      description: 'Entretien soigne et regulier de votre maison ou villa par des agents de confiance, avec planning et produits adaptes.',
+      icon: 'bi-house-check',
+      image: '/1.jpeg'
+    },
+    {
+      title: 'Desinfection et Deratisation (3D)',
+      description: 'Desinfection antibacterienne, deratisation et desinsectisation certifiee pour locaux professionnels, restaurants et habitations.',
+      icon: 'bi-shield-check',
+      image: '/9.jpeg'
+    },
+    {
+      title: 'Nettoyage Facades et Enseignes',
+      description: 'Lavage haute pression, bardages exterieurs, devantures et enseignes pour valoriser l image de votre batiment ou commerce.',
+      icon: 'bi-layers-half',
+      image: '/10.jpeg'
     }
   ],
   story: {
