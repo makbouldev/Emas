@@ -103,6 +103,33 @@ function HomePage() {
     ? resolveMediaPath(content.hero.backgroundImage, apiBaseUrl)
     : heroImage;
 
+  const heroBackgrounds = useMemo(
+    () => [
+      resolvedHeroImage || '/hero.jpeg',
+      '/hero-2.jpg',
+      '/hero-3.jpg',
+      '/hero-4.jpg'
+    ],
+    [resolvedHeroImage]
+  );
+  const [heroBgIndex, setHeroBgIndex] = useState(0);
+
+  const prevHeroBg = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setHeroBgIndex((prev) => (prev - 1 + heroBackgrounds.length) % heroBackgrounds.length);
+  };
+
+  const nextHeroBg = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setHeroBgIndex((prev) => (prev + 1) % heroBackgrounds.length);
+  };
+
   const openQuickBookPanel = (detail, event) => {
     if (event) {
       event.preventDefault();
@@ -152,8 +179,27 @@ function HomePage() {
           buildFaqSchema(homeFaqs)
         ]}
       />
-      <section className="hero-section" style={{ backgroundImage: `url(${resolvedHeroImage})` }}>
+      <section className="hero-section" style={{ backgroundImage: `url(${heroBackgrounds[heroBgIndex]})` }}>
         <div className="hero-overlay" />
+        
+        {/* Navigation Buttons to switch background images */}
+        <button
+          type="button"
+          className="hero-nav-btn hero-nav-prev"
+          onClick={prevHeroBg}
+          aria-label="Arrière-plan précédent"
+        >
+          <i className="bi bi-chevron-left" />
+        </button>
+        <button
+          type="button"
+          className="hero-nav-btn hero-nav-next"
+          onClick={nextHeroBg}
+          aria-label="Arrière-plan suivant"
+        >
+          <i className="bi bi-chevron-right" />
+        </button>
+
         <div className="container position-relative">
           <motion.div className="hero-content" initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
             <h1>{content.hero.title}</h1>
@@ -177,6 +223,27 @@ function HomePage() {
             </div>
           </motion.div>
         </div>
+
+        {/* Hero Background Indicator Dots */}
+        <div className="hero-bg-indicator">
+          <div className="hero-bg-dots">
+            {heroBackgrounds.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`hero-bg-dot ${i === heroBgIndex ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setHeroBgIndex(i);
+                }}
+                aria-label={`Aller à l'arrière-plan ${i + 1}`}
+              />
+            ))}
+          </div>
+          <span>{heroBgIndex + 1}/{heroBackgrounds.length}</span>
+        </div>
+
         <div className="hero-wave" />
       </section>
 
