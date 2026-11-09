@@ -30,6 +30,7 @@ function AnimatedStatValue({ value }) {
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
+    if (!value || typeof value !== 'string') return;
     const match = value.match(/(\d+(?:[.,]\d+)?)/);
     if (!isInView || !match) {
       return;

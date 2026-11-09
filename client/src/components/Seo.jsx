@@ -6,7 +6,8 @@ const DEFAULT_IMAGE = `${DEFAULT_SITE_URL}/logo.png`;
 
 const setMetaTag = (name, content, isProperty = false) => {
   if (!content) return;
-  const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+  const safeName = String(name).replace(/"/g, '\\"');
+  const selector = isProperty ? `meta[property="${safeName}"]` : `meta[name="${safeName}"]`;
   let meta = document.head.querySelector(selector);
   if (!meta) {
     meta = document.createElement('meta');
@@ -30,11 +31,12 @@ const setLinkTag = (rel, href) => {
 
 const setJsonLd = (id, data) => {
   if (!id) return;
-  let script = document.head.querySelector(`script[data-seo-id="${id}"]`);
+  const safeId = String(id).replace(/[^a-zA-Z0-9_-]/g, '_');
+  let script = document.head.querySelector(`script[data-seo-id="${safeId}"]`);
   if (!script) {
     script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.setAttribute('data-seo-id', id);
+    script.setAttribute('data-seo-id', safeId);
     document.head.appendChild(script);
   }
   script.textContent = JSON.stringify(data);
@@ -51,7 +53,8 @@ function Seo({
   structuredData = []
 }) {
   useEffect(() => {
-    const absolutePath = path.startsWith('/') ? path : `/${path}`;
+    const cleanPath = String(path || '/').split('?')[0].split('#')[0];
+    const absolutePath = cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`;
     const canonicalUrl = `${DEFAULT_SITE_URL}${absolutePath}`;
     const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
     const ogImage = image ? (image.startsWith('http') ? image : `${DEFAULT_SITE_URL}${image}`) : DEFAULT_IMAGE;

@@ -14,17 +14,18 @@
     </script>
     <!-- Event snippet for Website lead conversion page -->
     <script>
-      gtag('event', 'conversion', {'send_to': 'AW-18516311815/aWsdCOy1sLAdEIf-of1E'});
       function gtag_report_conversion(url) {
         var callback = function () {
           if (typeof(url) != 'undefined') {
             window.location = url;
           }
         };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-18516311815/aWsdCOy1sLAdEIf-of1E',
-            'event_callback': callback
-        });
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+              'send_to': 'AW-18516311815/aWsdCOy1sLAdEIf-of1E',
+              'event_callback': callback
+          });
+        }
         return false;
       }
     </script>
