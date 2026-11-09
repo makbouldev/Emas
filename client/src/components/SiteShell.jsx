@@ -27,6 +27,7 @@ function SiteShell() {
   const quickLinks = [
     { to: '/', label: 'Accueil' },
     { to: '/services', label: 'Services' },
+    { to: '/services-entreprises', label: 'Services aux Entreprises' },
     { to: '/gallery', label: 'Galerie' },
     { to: '/contact', label: 'Contact' }
   ];
@@ -99,23 +100,7 @@ function SiteShell() {
             <ul className="navbar-nav ms-auto gap-lg-2">
               <li className="nav-item"><NavLink className="nav-link" to="/">Accueil</NavLink></li>
               <li className="nav-item"><NavLink className="nav-link" to="/services">Services</NavLink></li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Services aux Entreprises
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/services-entreprises/nettoyage-sites-professionnels">
-                      Nettoyage Sites Professionnels
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/services-entreprises/audit-hygiene">
-                      Audit Hygiene et Proprete
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+              <li className="nav-item"><NavLink className="nav-link" to="/services-entreprises">Services aux Entreprises</NavLink></li>
               <li className="nav-item"><NavLink className="nav-link" to="/gallery">Galerie</NavLink></li>
             </ul>
             <NavLink className="nav-contact-cta ms-lg-3 mt-3 mt-lg-0" to="/contact">
