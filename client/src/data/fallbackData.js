@@ -38,7 +38,12 @@ export const fallbackData = {
       title: 'Grand Menage',
       description: 'Remise en propre integrale et approfondie pour appartements et villas, avant ou apres demenagement, fetes ou longue fermeture.',
       icon: 'bi-stars',
-      image: '/services/grand-menage.jpg'
+      image: '/services/grand-menage-1.png',
+      images: [
+        '/services/grand-menage-1.png',
+        '/services/grand-menage-2.jpg',
+        '/services/grand-menage-3.png'
+      ]
     },
     {
       title: 'Nettoyage Fin de Chantier',

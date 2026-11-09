@@ -17,7 +17,12 @@ const serviceCatalog = [
     title: 'Grand Nettoyage',
     icon: 'bi-stars',
     category: 'Domicile',
-    image: '/services/grand-menage.jpg',
+    image: '/services/grand-menage-1.png',
+    images: [
+      '/services/grand-menage-1.png',
+      '/services/grand-menage-2.jpg',
+      '/services/grand-menage-3.png'
+    ],
     description: 'Nettoyage approfondi apres demenagement, reception, travaux legers ou longue absence.'
   },
   {
