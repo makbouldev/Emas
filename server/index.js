@@ -434,14 +434,37 @@ async function sendEmailNotification(contactEntry) {
     await transporter.sendMail({
       from: `"EMAS Nettoyage" <${smtpUser}>`,
       to: targetEmail,
-      subject: `Nouveau Devis: ${contactEntry.name} (${contactEntry.phone})`,
-      text: `Nouveau message de devis:\nNom: ${contactEntry.name}\nTéléphone: ${contactEntry.phone}\nMessage: ${contactEntry.message || 'Aucun message'}`,
+      subject: `[DEVIS EMAS] ${contactEntry.title || 'Demande de Devis'} - ${contactEntry.name} (${contactEntry.phone})`,
+      text: `Nouveau message de devis:\nTitre: ${contactEntry.title || 'Demande de Devis'}\nNom: ${contactEntry.name}\nTéléphone: ${contactEntry.phone}\nEmail: ${contactEntry.email || 'Non renseigné'}\nService: ${contactEntry.service || 'Non spécifié'}\nMessage: ${contactEntry.message || 'Aucun message'}`,
       html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #e0e0e0; border-radius: 8px;">
-          <h2 style="color: #04508d; margin-top: 0;">Nouveau Message Devis - EMAS Nettoyage</h2>
-          <p><strong>Nom complet:</strong> ${contactEntry.name}</p>
-          <p><strong>Téléphone:</strong> <a href="tel:${contactEntry.phone}" style="color: #04508d;">${contactEntry.phone}</a></p>
-          <p><strong>Message / Besoin:</strong> ${contactEntry.message || 'Aucun message'}</p>
+        <div style="font-family: Arial, sans-serif; padding: 25px; color: #333; max-width: 650px; border: 1px solid #e0e0e0; border-radius: 10px; background: #ffffff;">
+          <div style="border-bottom: 2px solid #04508d; padding-bottom: 15px; margin-bottom: 20px;">
+            <h2 style="color: #04508d; margin: 0;">Nouveau Devis Reçu - EMAS Nettoyage</h2>
+            <p style="color: #666; margin: 5px 0 0;">${contactEntry.title || 'Demande de Devis Nettoyage'}</p>
+          </div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; width: 140px; color: #555;">Nom Complet :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #111;">${contactEntry.name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Téléphone :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #eee;"><a href="tel:${contactEntry.phone}" style="color: #04508d; font-weight: bold; text-decoration: none;">${contactEntry.phone}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Email :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #eee;"><a href="mailto:${contactEntry.email || ''}" style="color: #04508d;">${contactEntry.email || 'Non renseigné'}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Service Choisi :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; color: #04508d; font-weight: bold;">${contactEntry.service || 'Non spécifié'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Détails / Message :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #eee; line-height: 1.6;">${contactEntry.message || 'Aucun détail précisé'}</td>
+            </tr>
+          </table>
+          <p style="margin-top: 20px; font-size: 12px; color: #888;">Ce message a été généré automatiquement depuis le site web emas-nettoyage.vercel.app.</p>
         </div>
       `
     });
@@ -451,7 +474,7 @@ async function sendEmailNotification(contactEntry) {
 }
 
 app.post('/api/contact', (req, res) => {
-  const { name, phone, message } = req.body || {};
+  const { name, phone, email, service, title, message } = req.body || {};
 
   if (!name || !phone) {
     return res.status(400).json({
@@ -464,9 +487,12 @@ app.post('/api/contact', (req, res) => {
     id: randomUUID(),
     name: String(name).trim(),
     phone: String(phone).trim(),
+    email: String(email || '').trim(),
+    service: String(service || '').trim(),
+    title: String(title || 'Demande de Devis').trim(),
     message: String(message || '').trim(),
     status: 'new',
-    source: 'contact-page',
+    source: 'quote-modal',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
@@ -479,12 +505,8 @@ app.post('/api/contact', (req, res) => {
 
   return res.json({
     success: true,
-    message: 'Demande recue. L equipe EMAS vous contactera rapidement.',
-    data: {
-      name: contactEntry.name,
-      phone: contactEntry.phone,
-      message: contactEntry.message
-    }
+    message: 'Votre demande de devis a été envoyée avec succès ! Notre équipe vous contactera rapidement.',
+    data: contactEntry
   });
 });
 

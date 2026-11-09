@@ -218,7 +218,14 @@ function HomePage() {
                 <span>WhatsApp: 07 25 57 25 50</span>
               </a>
             </div>
-            <div className="hero-secondary-action">
+            <div className="hero-secondary-action d-flex flex-wrap gap-2 justify-content-center">
+              <button
+                type="button"
+                className="btn btn-emergency fw-bold px-4 py-2 rounded-pill shadow-sm"
+                onClick={(e) => openQuickBookPanel({ title: 'Demande de Devis Gratuit' }, e)}
+              >
+                <i className="bi bi-file-earmark-text-fill me-1" /> Demander un Devis Gratuit
+              </button>
               <Link to="/services" className="btn btn-light">{content.hero.ctaSecondary}</Link>
             </div>
           </motion.div>

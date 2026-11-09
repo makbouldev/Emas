@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSiteData } from '../context/SiteDataContext';
 import logo from '../assets/logo.png';
 import ChatAssistant from './ChatAssistant';
+import QuoteModal from './QuoteModal';
 
 function SiteShell() {
   const { content } = useSiteData();
@@ -173,44 +174,11 @@ function SiteShell() {
         </a>
       </div>
 
-      {showQuickBook && (
-        <div className="quick-book-overlay" onClick={() => setShowQuickBook(false)}>
-          <section className="quick-book-panel" onClick={(event) => event.stopPropagation()}>
-            <button type="button" className="quick-book-close" onClick={() => setShowQuickBook(false)} aria-label="Fermer">
-              <i className="bi bi-x-lg" />
-            </button>
-            <h4>{activeBookTitle}</h4>
-            <p className="quick-book-copy">{activeBookCopy}</p>
-            <div className="quick-book-row">
-              <i className="bi bi-telephone-fill" />
-              <a href={`tel:${activeBookPhoneDigits}`}>{activeBookPhone}</a>
-            </div>
-            <div className="quick-book-row">
-              <i className="bi bi-envelope-fill" />
-              <a href={`mailto:${activeBookEmail}`}>{activeBookEmail}</a>
-            </div>
-            {activeBookAddress && (
-              <div className="quick-book-row">
-                <i className="bi bi-geo-alt-fill" />
-                <span>{activeBookAddress}</span>
-              </div>
-            )}
-            <div className="quick-book-row">
-              <i className="bi bi-chat-dots-fill" />
-              <span>{activeBookMessage}</span>
-            </div>
-            <div className="quick-book-actions">
-              <a className="quick-btn quick-wa" href={`https://wa.me/${activeBookWhatsappDigits}`} target="_blank" rel="noreferrer">
-                <i className="bi bi-whatsapp" /> WhatsApp
-              </a>
-              <a className="quick-btn quick-call" href={`tel:${activeBookPhoneDigits}`}>
-                <i className="bi bi-telephone-fill" /> Appeler
-              </a>
-            </div>
-            <p className="quick-book-note mb-0">EMAS Nettoyage repond vite avec une equipe ponctuelle, discrete et soigneuse.</p>
-          </section>
-        </div>
-      )}
+      <QuoteModal
+        isOpen={showQuickBook}
+        onClose={() => setShowQuickBook(false)}
+        initialData={quickBookData}
+      />
 
       <ChatAssistant />
     </div>
