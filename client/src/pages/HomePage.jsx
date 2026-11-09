@@ -297,7 +297,9 @@ function HomePage() {
       <section className="section home-about-premium">
         <div className="container">
           <h2 className="section-title">Qui Sommes-Nous ?</h2>
-          <p className="home-about-lead text-center">EMAS Nettoyage accompagne les particuliers, entreprises, syndics et commerces avec des prestations propres, flexibles et controlees.</p>
+          <p className="home-about-lead text-center">
+            EMAS Nettoyage intervient à domicile et en entreprise avec des équipes professionnelles, des femmes de ménage qualifiées et un matériel professionnel de pointe pour un résultat irréprochable.
+          </p>
           <div className="row g-4 mt-2 align-items-stretch">
             <div className="col-lg-5">
               <div className="about-photo-wrap h-100">
@@ -310,10 +312,38 @@ function HomePage() {
             </div>
             <div className="col-lg-7">
               <div className="row g-3">
-                <div className="col-md-6"><div className="about-premium-card h-100"><span className="about-badge">Intervention</span><span className="about-card-icon"><i className="bi bi-shield-check" /></span><h5>Rapide et Structuree</h5><p>Visite, devis, planning et intervention selon la taille du lieu et le niveau de nettoyage demande.</p></div></div>
-                <div className="col-md-6"><div className="about-premium-card h-100"><span className="about-badge">Equipe</span><span className="about-card-icon"><i className="bi bi-people-fill" /></span><h5>Agents Qualifies</h5><p>Mobilisation d agents formes avec superviseur pour les interventions sensibles ou volumineuses.</p></div></div>
-                <div className="col-md-6"><div className="about-premium-card h-100"><span className="about-badge">Domicile</span><span className="about-card-icon"><i className="bi bi-globe2" /></span><h5>Maisons et Appartements</h5><p>Nettoyage regulier, grand menage, cuisine, sanitaires, vitres, tapis et canapes.</p></div></div>
-                <div className="col-md-6"><div className="about-premium-card h-100"><span className="about-badge">Professionnel</span><span className="about-card-icon"><i className="bi bi-cpu-fill" /></span><h5>Couverture Complete</h5><p>Bureaux, commerces, chantiers, syndics et evenements avec controle qualite.</p></div></div>
+                <div className="col-md-6">
+                  <div className="about-premium-card h-100">
+                    <span className="about-badge">À Domicile</span>
+                    <span className="about-card-icon"><i className="bi bi-house-check-fill" /></span>
+                    <h5>Nettoyage à Domicile</h5>
+                    <p>Intervention sur mesure pour villas et appartements : entretien régulier, grand ménage, vitres, canapés et remise en état complète.</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="about-premium-card h-100">
+                    <span className="about-badge">Équipe</span>
+                    <span className="about-card-icon"><i className="bi bi-people-fill" /></span>
+                    <h5>Équipe Pro & Femmes de Ménage</h5>
+                    <p>Agents qualifiés et femmes de ménage expérimentées, ponctuelles, de confiance et formées aux exigences de propreté les plus strictes.</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="about-premium-card h-100">
+                    <span className="about-badge">Équipement</span>
+                    <span className="about-card-icon"><i className="bi bi-tools" /></span>
+                    <h5>Matériel Professionnel</h5>
+                    <p>Machines industrielles de haute performance : injecteurs-extracteurs pour tissus, monobrosses, nettoyeurs haute pression et perches télescopiques.</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="about-premium-card h-100">
+                    <span className="about-badge">Professionnel</span>
+                    <span className="about-card-icon"><i className="bi bi-building-check" /></span>
+                    <h5>Bureaux & Chantiers</h5>
+                    <p>Entretien quotidien ou périodique de locaux professionnels, open spaces, commerces et nettoyage en profondeur de fin de chantier.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

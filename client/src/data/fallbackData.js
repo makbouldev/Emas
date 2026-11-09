@@ -6,7 +6,7 @@ export const fallbackData = {
   hero: {
     title: 'Service de Nettoyage Professionnel',
     subtitle:
-      'EMAS Nettoyage intervient pour maisons, bureaux, commerces, chantiers et sites professionnels avec des equipes fiables, du materiel adapte et un resultat propre jusque dans les details.',
+      'EMAS Nettoyage intervient avec expertise pour vos vitres, canapés & tapis, grand ménage, fin de chantier, traitement des sols et nettoyage de bureaux. Équipes fiables, matériel professionnel et résultat impeccable jusque dans les détails.',
     ctaPrimary: 'Demander un Devis',
     ctaSecondary: 'Voir Tous Les Services',
     backgroundImage: 'hero.jpeg'
