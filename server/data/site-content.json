@@ -61,7 +61,12 @@
       "title": "Traitement et Cristallisation des Sols",
       "description": "Decapage approfondi, poncage, lustrage et cristallisation pour redonner eclat et brillance au marbre, carrelage et parquets.",
       "icon": "bi-grid-3x3-gap-fill",
-      "image": "/services/sols.jpg"
+      "image": "/services/sols-1.jpg",
+      "images": [
+        "/services/sols-1.jpg",
+        "/services/sols-2.jpg",
+        "/services/sols-3.png"
+      ]
     },
     {
       "title": "Nettoyage de Bureaux et Locaux",

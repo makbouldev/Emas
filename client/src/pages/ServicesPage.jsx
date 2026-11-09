@@ -74,7 +74,12 @@ const serviceCatalog = [
     title: 'Traitement et Cristallisation des Sols',
     icon: 'bi-grid-3x3-gap-fill',
     category: 'Technique',
-    image: '/services/sols.jpg',
+    image: '/services/sols-1.jpg',
+    images: [
+      '/services/sols-1.jpg',
+      '/services/sols-2.jpg',
+      '/services/sols-3.png'
+    ],
     description: 'Decapage, poncage, lustrage et cristallisation du marbre, carrelage et parquets.'
   },
   {
