@@ -136,24 +136,6 @@ const defaultSiteContent = {
         '/services/bureaux-2.png',
         '/services/bureaux-3.png'
       ]
-    },
-    {
-      title: 'Nettoyage a Domicile',
-      description: 'Entretien soigne et regulier de votre maison ou villa par des agents de confiance, avec planning et produits adaptes.',
-      icon: 'bi-house-check',
-      image: '/services/domicile.jpg'
-    },
-    {
-      title: 'Desinfection et Deratisation (3D)',
-      description: 'Desinfection antibacterienne, deratisation et desinsectisation certifiee pour locaux professionnels, restaurants et habitations.',
-      icon: 'bi-shield-check',
-      image: '/services/desinfection.jpg'
-    },
-    {
-      title: 'Nettoyage Facades et Enseignes',
-      description: 'Lavage haute pression, bardages exterieurs, devantures et enseignes pour valoriser l image de votre batiment ou commerce.',
-      icon: 'bi-layers-half',
-      image: '/services/facades.jpg'
     }
   ],
   story: {
